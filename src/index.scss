@@ -242,3 +242,25 @@ hr.divider {
 .centerImage {
     object-position: top center !important;
 }
+
+.mainWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #EBEBEB;
+    border-radius: 0.5rem;
+}
+
+.teamWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}

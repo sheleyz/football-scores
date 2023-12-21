@@ -3,7 +3,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
     return (
-        <footer className="bg-brand-primary">
+        <footer className="bg-brand-secondary">
             <div className="container px-4 px-lg-5 pt-4 fw-semibold">
                 <div className="text-center">
                     <a className="btn btn-social mx-3 my-3" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram">
