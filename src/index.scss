@@ -112,11 +112,11 @@ html, body {
         color: var(--brand-light);
 
         &.active {
-            color: var(--brand-primary);
+            color: var(--brand-grey);
         }
 
         &:hover {
-            color: var(--brand-primary);
+            color: var(--brand-grey);
         }
 
         @media (min-width: 768px) {
@@ -127,7 +127,7 @@ html, body {
 
 .navbar-toggler {
     border: none;
-    color: var(--brand-primary);
+    color: var(--brand-grey);
 
     &.collapsed {
         color: var(--brand-light);
@@ -153,7 +153,7 @@ hr.divider {
     height: 0.2rem;
     max-width: 3.25rem;
     margin: 1.5rem auto;
-    background-color: var(--brand-primary);
+    background-color: var(--brand-grey);
     opacity: 1;
 }
 
@@ -169,7 +169,7 @@ hr.divider {
 
     &:hover,
     &:active {
-        color: var(--brand-primary) !important;
+        color: var(--brand-grey) !important;
     }
 }
 
@@ -233,7 +233,7 @@ hr.divider {
     margin-bottom: 0.5rem;
 
     div {
-        border: 2px solid var(--brand-primary);
+        border: 2px solid var(--brand-grey);
         border-radius: 0.5rem;
         padding: 5px;
     }
@@ -258,9 +258,23 @@ hr.divider {
     border-radius: 0.5rem;
 }
 
+.scoreWrapper {
+    display: flex;
+    text-align: center;
+}
+
 .teamWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
+}
+
+footer a {
+    color: inherit;
+
+    &:hover,
+    &:active {
+        color: var(--brand-grey) !important;
+    }
 }
