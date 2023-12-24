@@ -258,6 +258,16 @@ hr.divider {
     border-radius: 0.5rem;
 }
 
+.gameDetailsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spreadDetailsWrapper {
+    text-align: end;
+}
+
 .scoreWrapper {
     display: flex;
     text-align: center;

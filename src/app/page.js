@@ -15,7 +15,7 @@ export default function Home() {
         async function getData() {
             try {
                 const response = await fetch(
-                    "https://api.baserow.io/api/database/rows/table/229773/?user_field_names=true&order_by=-schedule_season%2C-schedule_week&size=10&filters=%7B%22filter_type%22%3A%22OR%22%2C%22filters%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22field%22%3A%22team_home%22%2C%22value%22%3A%22Indianapolis%20Colts%22%7D%2C%7B%22type%22%3A%22contains%22%2C%22field%22%3A%22team_away%22%2C%22value%22%3A%22Indianapolis%20Colts%22%7D%5D%2C%22groups%22%3A%5B%5D%7D",
+                    "https://api.baserow.io/api/database/rows/table/229773/?user_field_names=true&order_by=-schedule_season%2C-schedule_week&size=30&filters=%7B%22filter_type%22%3A%22AND%22%2C%22filters%22%3A%5B%7B%22type%22%3A%22equal%22%2C%22field%22%3A%22schedule_season%22%2C%22value%22%3A%222023%22%7D%5D%2C%22groups%22%3A%5B%7B%22filter_type%22%3A%22OR%22%2C%22filters%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22field%22%3A%22team_home%22%2C%22value%22%3A%22Indianapolis%20Colts%22%7D%2C%7B%22type%22%3A%22contains%22%2C%22field%22%3A%22team_away%22%2C%22value%22%3A%22Indianapolis%20Colts%22%7D%5D%2C%22groups%22%3A%5B%5D%7D%5D%7D",
                     {
                         method: "GET",
                         headers: {
@@ -60,11 +60,7 @@ export default function Home() {
                                 return (
                                     <div key={item.id} className="col-sm-12 col-md-6 col-lg-4 p-0">
                                         <div className="gameWrapper">
-                                            <div className="gameWeek">
-                                                Week {item.schedule_week} | {item.schedule_date}
-                                            </div>
-                                            <div className="gameStadium">{item.stadium}</div>
-                                            <div className="scoreWrapper">
+                                            <div className="scoreWrapper pb-3">
                                                 <div className="teamWrapper">
                                                     <div className="teamName">{item.team_home}</div>
                                                     <div className="teamScore">{item.score_home}</div>
@@ -74,10 +70,20 @@ export default function Home() {
                                                     <div className="teamScore">{item.score_away}</div>
                                                 </div>
                                             </div>
-                                            <div className="spreadFavorite">
-                                                {item.team_favorite_id} {item.spread_favorite}
+                                            <div className="gameDetailsWrapper">
+                                                <div>
+                                                    <div className="gameWeek">
+                                                        Week {item.schedule_week} | {item.schedule_date}
+                                                    </div>
+                                                    <div className="gameStadium">{item.stadium}</div>
+                                                </div>
+                                                <div className="spreadDetailsWrapper">
+                                                    <div className="spreadFavorite">
+                                                        {item.team_favorite_id} {item.spread_favorite}
+                                                    </div>
+                                                    <div className="overUnderLine">+/- {item.over_under_line}</div>
+                                                </div>
                                             </div>
-                                            <div className="overUnderLine">+/- {item.over_under_line}</div>
                                         </div>
                                     </div>
                                 );
