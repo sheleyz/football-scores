@@ -12,16 +12,16 @@ const inter = localFont({
 });
 
 export const metadata = {
-    title: "NFL Teams App",
-    description: "An app that uses NFL data.",
+    title: "Football Scores",
+    description: "An app that shows scores for football games.",
     image: "./icon.png",
-    metadataBase: new URL("https://nflteamsapp.vercel.app"),
+    metadataBase: new URL("https://nflscores.vercel.app"),
 
     openGraph: {
-        title: "NFL Teams App",
-        description: "An app that uses NFL data.",
-        url: "https://nflteamsapp.vercel.app",
-        siteName: "NFL Teams App",
+        title: "Football Scores",
+        description: "An app that shows scores for football games.",
+        url: "https://nflscores.vercel.app",
+        siteName: "Football Scores",
         images: ["./icon.png"],
         locale: "en_US",
         type: "website"
@@ -29,10 +29,10 @@ export const metadata = {
 
     twitter: {
         card: "summary",
-        title: "NFL Teams App",
-        description: "An app that uses NFL data.",
+        title: "Football Scores",
+        description: "An app that shows scores for football games.",
         images: ["./icon.png"],
-        url: "https://nflteamsapp.vercel.app"
+        url: "https://nflscores.vercel.app"
     },
 
     icons: {
