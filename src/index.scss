@@ -258,6 +258,33 @@ hr.divider {
     border-radius: 0.5rem;
 }
 
+.scoreWrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.teamWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 50%;
+}
+
+.logoWrapper {
+    height: 100px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
 .gameDetailsWrapper {
     width: 100%;
     display: flex;
@@ -266,18 +293,6 @@ hr.divider {
 
 .spreadDetailsWrapper {
     text-align: end;
-}
-
-.scoreWrapper {
-    display: flex;
-    text-align: center;
-}
-
-.teamWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
 }
 
 footer a {
