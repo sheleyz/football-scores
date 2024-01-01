@@ -66,7 +66,7 @@ export default function Games({ gameData }) {
             filteredData = gameData.slice(0, limit);
         }
 
-        console.log(filteredData);
+        // console.log(filteredData);
         setData(filteredData.slice(0, limit));
     }, [filters, limit]);
 
