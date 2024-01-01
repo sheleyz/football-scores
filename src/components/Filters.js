@@ -58,7 +58,7 @@ export default function Filters({ onChange }) {
     // Sort Seasons in Descending Order
     seasons.sort((a, b) => b - a);
     return (
-        <div className="d-flex justify-content-center align-items-center w-100">
+        <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 mt-3">
             <select onChange={(e) => onChange("team", e.target.value)}>
                 <option value="all">All Teams</option>
                 {teams.map((team) => (

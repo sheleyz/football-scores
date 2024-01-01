@@ -134,7 +134,7 @@ export default function Game({ game }) {
                     </div>
                 </div>
                 <div className="gameDetailsWrapper">
-                    <div>
+                    <div className="envDetailsWrapper">
                         {game.schedule_week === "Wildcard" || game.schedule_week === "Division" || game.schedule_week === "Conference" || game.schedule_week === "Superbowl" ? (
                             <div className="gameWeek">
                                 {game.schedule_week} | {game.schedule_date}
@@ -147,7 +147,7 @@ export default function Game({ game }) {
                         <div className="gameStadium">{game.stadium}</div>
                     </div>
                     {game.team_favorite_id && (
-                        <div className="spreadDetailsWrapper">
+                        <div className="spreadDetailsWrapper ms-2">
                             <div className="spreadFavorite">
                                 {game.team_favorite_id} {game.spread_favorite}
                             </div>

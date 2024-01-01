@@ -96,7 +96,7 @@ export default function Games({ gameData }) {
             <Filters onChange={handleFilters} />
 
             {/* Display Games */}
-            <div className="row d-flex my-5 w-100">
+            <div className="row d-flex mt-4 mb-5 w-100">
                 {data.map((item, index) => {
                     return <Game game={item} key={index} />;
                 })}
