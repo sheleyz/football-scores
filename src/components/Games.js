@@ -103,11 +103,13 @@ export default function Games({ gameData }) {
             </div>
 
             {/* Load More Games */}
-            <div className="d-flex justify-content-center align-items-center w-100">
-                <Button variant="dark" size="lg" onClick={handleLoadMore} className="btn-brand-secondary">
-                    Load More
-                </Button>
-            </div>
+            {limit <= data.length && (
+                <div className="d-flex justify-content-center align-items-center w-100">
+                    <Button variant="dark" size="lg" onClick={handleLoadMore} className="btn-brand-secondary">
+                        Load More
+                    </Button>
+                </div>
+            )}
         </div>
     );
 }
