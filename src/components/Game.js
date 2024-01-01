@@ -120,6 +120,21 @@ export default function Game({ game }) {
         }
     };
 
+    const convertWeekName = (weekName) => {
+        switch (weekName) {
+            case "Wildcard":
+                return <div className="gameWeek">Wild Card | {game.schedule_date}</div>;
+            case "Division":
+                return <div className="gameWeek">Division | {game.schedule_date}</div>;
+            case "Conference":
+                return <div className="gameWeek">Conference | {game.schedule_date}</div>;
+            case "Superbowl":
+                return <div className="gameWeek">Super Bowl | {game.schedule_date}</div>;
+            default:
+                return <div className="gameWeek">{weekName} | {game.schedule_date}</div>;
+        }
+    };
+
     return (
         <div className="col-sm-12 col-md-6 col-lg-4 p-0">
             <div className="gameWrapper">
@@ -138,9 +153,7 @@ export default function Game({ game }) {
                 <div className="gameDetailsWrapper">
                     <div className="envDetailsWrapper">
                         {game.schedule_week === "Wildcard" || game.schedule_week === "Division" || game.schedule_week === "Conference" || game.schedule_week === "Superbowl" ? (
-                            <div className="gameWeek">
-                                {game.schedule_week} | {game.schedule_date}
-                            </div>
+                            convertWeekName(game.schedule_week)
                         ) : (
                             <div className="gameWeek">
                                 Week {game.schedule_week} | {game.schedule_date}
