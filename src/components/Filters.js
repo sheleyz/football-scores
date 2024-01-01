@@ -42,7 +42,9 @@ export default function Filters({ onChange }) {
         "Seattle Seahawks",
         "Pittsburgh Steelers",
         "Houston Texans",
+        "Houston Oilers",
         "Tennessee Titans",
+        "Tennessee Oilers",
         "Minnesota Vikings"
     ];
     let seasons = [];

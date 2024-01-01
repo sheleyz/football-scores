@@ -108,8 +108,10 @@ export default function Game({ game }) {
             case "Pittsburgh Steelers":
                 return <Image src={steelers} alt={`${teamName} logo`} placeholder="blur" className="rounded-3" />;
             case "Houston Texans":
+            case "Houston Oilers":
                 return <Image src={texans} alt={`${teamName} logo`} placeholder="blur" className="rounded-3" />;
             case "Tennessee Titans":
+            case "Tennessee Oilers":
                 return <Image src={titans} alt={`${teamName} logo`} placeholder="blur" className="rounded-3" />;
             case "Minnesota Vikings":
                 return <Image src={vikings} alt={`${teamName} logo`} placeholder="blur" className="rounded-3" />;
