@@ -1,6 +1,50 @@
 "use client";
 
 export default function Filters({ onChange }) {
+    let teams = [
+        "San Francisco 49ers",
+        "Chicago Bears",
+        "Cincinnati Bengals",
+        "Buffalo Bills",
+        "Denver Broncos",
+        "Cleveland Browns",
+        "Tampa Bay Buccaneers",
+        "Arizona Cardinals",
+        "Phoenix Cardinals",
+        "St. Louis Cardinals",
+        "Los Angeles Chargers",
+        "San Diego Chargers",
+        "Kansas City Chiefs",
+        "Indianapolis Colts",
+        "Baltimore Colts",
+        "Washington Commanders",
+        "Washington Football Team",
+        "Washington Redskins",
+        "Dallas Cowboys",
+        "Miami Dolphins",
+        "Philadelphia Eagles",
+        "Atlanta Falcons",
+        "New York Giants",
+        "Jacksonville Jaguars",
+        "New York Jets",
+        "Detroit Lions",
+        "Green Bay Packers",
+        "Carolina Panthers",
+        "New England Patriots",
+        "Boston Patriots",
+        "Las Vegas Raiders",
+        "Los Angeles Raiders",
+        "Oakland Raiders",
+        "Los Angeles Rams",
+        "St. Louis Rams",
+        "Baltimore Ravens",
+        "New Orleans Saints",
+        "Seattle Seahawks",
+        "Pittsburgh Steelers",
+        "Houston Texans",
+        "Tennessee Titans",
+        "Minnesota Vikings"
+    ];
     let seasons = [];
     let weeks = [];
     // List Seasons
@@ -17,7 +61,11 @@ export default function Filters({ onChange }) {
         <div className="d-flex justify-content-center align-items-center w-100">
             <select onChange={(e) => onChange("team", e.target.value)}>
                 <option value="all">All Teams</option>
-                <option value="Indianapolis Colts">Indianapolis Colts</option>
+                {teams.map((team) => (
+                    <option value={team} key={team}>
+                        {team}
+                    </option>
+                ))}
             </select>
 
             <select onChange={(e) => onChange("season", e.target.value)}>
