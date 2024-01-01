@@ -244,6 +244,21 @@ hr.divider {
     object-position: top center !important;
 }
 
+.heroIntro {
+    @media (min-width: 992px) {
+        max-width: 900px !important;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover,
+        &:active {
+            color: var(--brand-grey-dark) !important;
+        }
+    }
+}
+
 .mainWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -326,5 +341,11 @@ footer a {
     &:hover,
     &:active {
         color: var(--brand-grey) !important;
+    }
+}
+
+.footerText {
+    @media (min-width: 992px) {
+        max-width: 900px !important;
     }
 }
