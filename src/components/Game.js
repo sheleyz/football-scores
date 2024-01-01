@@ -124,12 +124,12 @@ export default function Game({ game }) {
         <div className="col-sm-12 col-md-6 col-lg-4 p-0">
             <div className="gameWrapper">
                 <div className="scoreWrapper pb-3">
-                    <div className="teamWrapper">
+                    <div className={`teamWrapper ${Number(game.score_home) > Number(game.score_away) && "fw-bold"}`}>
                         <div className="logoWrapper mb-2">{getTeamLogo(game.team_home)}</div>
                         <div className="teamName">{game.team_home}</div>
                         <div className="teamScore">{game.score_home}</div>
                     </div>
-                    <div className="teamWrapper">
+                    <div className={`teamWrapper ${Number(game.score_away) > Number(game.score_home) && "fw-bold"}`}>
                         <div className="logoWrapper mb-2">{getTeamLogo(game.team_away)}</div>
                         <div className="teamName">{game.team_away}</div>
                         <div className="teamScore">{game.score_away}</div>
