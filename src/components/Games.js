@@ -105,7 +105,7 @@ export default function Games({ gameData }) {
             {/* Load More Games */}
             {limit <= data.length && (
                 <div className="d-flex justify-content-center align-items-center w-100">
-                    <Button variant="dark" size="lg" onClick={handleLoadMore} className="btn-brand-secondary">
+                    <Button data-bs-theme="dark" size="lg" onClick={handleLoadMore} className="btn-brand-secondary border-0">
                         Load More
                     </Button>
                 </div>

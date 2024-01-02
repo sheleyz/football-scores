@@ -1,5 +1,7 @@
 "use client";
 
+import Form from "react-bootstrap/Form";
+
 export default function Filters({ onChange }) {
     let teams = [
         "San Francisco 49ers",
@@ -61,25 +63,25 @@ export default function Filters({ onChange }) {
     seasons.sort((a, b) => b - a);
     return (
         <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 mt-3">
-            <select onChange={(e) => onChange("team", e.target.value)}>
+            <Form.Select className="bg-brand-light" onChange={(e) => onChange("team", e.target.value)}>
                 <option value="all">All Teams</option>
                 {teams.map((team) => (
                     <option value={team} key={team}>
                         {team}
                     </option>
                 ))}
-            </select>
+            </Form.Select>
 
-            <select onChange={(e) => onChange("season", e.target.value)}>
+            <Form.Select className="bg-brand-light" onChange={(e) => onChange("season", e.target.value)}>
                 <option value="all">All Seasons</option>
                 {seasons.map((season) => (
                     <option value={season} key={season}>
                         {season}
                     </option>
                 ))}
-            </select>
+            </Form.Select>
 
-            <select onChange={(e) => onChange("week", e.target.value)}>
+            <Form.Select className="bg-brand-light" onChange={(e) => onChange("week", e.target.value)}>
                 <option value="all">All Weeks</option>
                 {weeks.map((week) => (
                     <option value={week} key={week}>
@@ -90,7 +92,7 @@ export default function Filters({ onChange }) {
                 <option value="Division">Division</option>
                 <option value="Conference">Conference</option>
                 <option value="Superbowl">Super Bowl</option>
-            </select>
+            </Form.Select>
         </div>
     );
 }
