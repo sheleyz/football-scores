@@ -13,13 +13,13 @@ const inter = localFont({
 
 export const metadata = {
     title: "Football Scores",
-    description: "An app that shows scores for football games.",
+    description: "Football Scores provides final scores, betting odds (when available), and other details for all NFL games since 1966.",
     image: "./icon.png",
     metadataBase: new URL("https://nflscores.vercel.app"),
 
     openGraph: {
         title: "Football Scores",
-        description: "An app that shows scores for football games.",
+        description: "Football Scores provides final scores, betting odds (when available), and other details for all NFL games since 1966.",
         url: "https://nflscores.vercel.app",
         siteName: "Football Scores",
         images: ["./icon.png"],
@@ -30,7 +30,7 @@ export const metadata = {
     twitter: {
         card: "summary",
         title: "Football Scores",
-        description: "An app that shows scores for football games.",
+        description: "Football Scores provides final scores, betting odds (when available), and other details for all NFL games since 1966.",
         images: ["./icon.png"],
         url: "https://nflscores.vercel.app"
     },
