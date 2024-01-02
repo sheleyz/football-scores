@@ -4,6 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import localFont from "next/font/local";
+import Script from "next/script";
 
 const inter = localFont({
     src: "./fonts/Inter/Inter-VariableFont_slnt_wght.ttf",
@@ -45,6 +46,16 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en-US">
             <body className={inter.variable}>{children}</body>
+
+            {/* Google tag (gtag.js) */}
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H9K5XVBHBF"></Script>
+            <Script id="google-analytics">
+                {`window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-H9K5XVBHBF');`}
+            </Script>
         </html>
     );
 }
