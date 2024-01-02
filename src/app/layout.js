@@ -39,6 +39,13 @@ export const metadata = {
     icons: {
         icon: "./icon.png",
         shortcut: "./icon.png"
+    },
+
+    verification: {
+        google: "mUwMofjCd9iaaQC1nkCZaoJrxfv95Ais8OMQTxqae0A",
+        other: {
+            "msvalidate.01": "913751F24A1482E2603AE560D9749A01"
+        }
     }
 };
 
