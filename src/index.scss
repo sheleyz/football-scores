@@ -42,14 +42,6 @@ body {
     color: var(--brand-secondary);
 }
 
-.hero {
-    margin-top: 5rem;
-
-    h2 {
-        font-weight: 500;
-    }
-}
-
 .btn-outline-brand-primary {
     color: var(--brand-primary) !important;
     border-color: var(--brand-primary) !important;
@@ -145,10 +137,6 @@ body {
     object-fit: cover;
 }
 
-.page-section {
-    padding: 8rem 0;
-}
-
 hr.divider {
     border-top: 0;
     height: 0.2rem;
@@ -171,72 +159,6 @@ hr.divider {
     &:hover,
     &:active {
         color: var(--brand-grey) !important;
-    }
-}
-
-#home {
-    p {
-        max-width: 900px;
-    }
-}
-
-.card-item {
-    object-fit: cover;
-    border: 4px solid white;
-    border-radius: 0.5rem;
-    box-shadow: 0px 5px 10px var(--brand-dark);
-
-    .imageWrapper {
-        height: 200px;
-        overflow: hidden;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: left top;
-        border-radius: 0.25rem 0.25rem 0rem 0rem;
-    }
-}
-
-.card-caption {
-    padding: 1.5rem 1.11rem;
-    text-align: center;
-    background-color: #fff;
-    border-top: 2px solid #EBEBEB;
-
-    a {
-        color: var(--brand-secondary);
-    }
-}
-
-.card-caption-heading {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.card-caption-subheading {
-    text-align: start;
-    margin-bottom: 0.5rem;
-}
-
-.card-caption-links,
-.card-caption-attributes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card-caption-attributes {
-    font-family: var(--font-inter), SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    margin-bottom: 0.5rem;
-
-    div {
-        border: 2px solid var(--brand-grey);
-        border-radius: 0.5rem;
-        padding: 5px;
     }
 }
 
