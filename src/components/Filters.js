@@ -63,7 +63,7 @@ export default function Filters({ onChange }) {
     seasons.sort((a, b) => b - a);
     return (
         <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 mt-3">
-            <Form.Select className="bg-brand-light" onChange={(e) => onChange("team", e.target.value)}>
+            <Form.Select className="bg-brand-light" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                 <option value="all">All Teams</option>
                 {teams.map((team) => (
                     <option value={team} key={team}>
@@ -72,7 +72,7 @@ export default function Filters({ onChange }) {
                 ))}
             </Form.Select>
 
-            <Form.Select className="bg-brand-light" onChange={(e) => onChange("season", e.target.value)}>
+            <Form.Select className="bg-brand-light" onChange={(e) => onChange("season", e.target.value)} aria-label="Select a season">
                 <option value="all">All Seasons</option>
                 {seasons.map((season) => (
                     <option value={season} key={season}>
@@ -81,7 +81,7 @@ export default function Filters({ onChange }) {
                 ))}
             </Form.Select>
 
-            <Form.Select className="bg-brand-light" onChange={(e) => onChange("week", e.target.value)}>
+            <Form.Select className="bg-brand-light" onChange={(e) => onChange("week", e.target.value)} aria-label="Select a week">
                 <option value="all">All Weeks</option>
                 {weeks.map((week) => (
                     <option value={week} key={week}>
