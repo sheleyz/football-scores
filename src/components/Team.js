@@ -129,11 +129,11 @@ export default function Team({ team }) {
                 <div className="teamRecordsWrapper">
                     <div className="teamRecordHeading">Overall Record</div>
                     <div className="teamRecord mb-2">
-                        {team.franchise_wins} - {team.franchise_losses} - {team.franchise_ties} ({(team.franchise_win_loss_percentage * 100).toFixed(2)}%)
+                        {team.franchise_wins} - {team.franchise_losses} - {team.franchise_ties} ({(team.franchise_win_loss_percentage * 100).toFixed(1)}%)
                     </div>
                     <div className="teamRecordHeading">Playoff Record</div>
                     <div className="teamRecord">
-                        {team.franchise_playoff_wins} - {team.franchise_playoff_losses} ({(team.franchise_playoff_win_loss_percentage * 100).toFixed(2)}%)
+                        {team.franchise_playoff_wins} - {team.franchise_playoff_losses} ({(team.franchise_playoff_win_loss_percentage * 100).toFixed(1)}%)
                     </div>
                 </div>
                 <div className="teamChampsWrapper">
