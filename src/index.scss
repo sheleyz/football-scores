@@ -190,9 +190,9 @@ hr.divider {
 .filterOptionsWrapper {
     select {
         margin: 10px;
-        width: 250px;
+        width: 275px;
 
-        @media (max-width: 330px) {
+        @media (max-width: 360px) {
             margin-left: 0px;
             margin-right: 0px;
             width: 100%;
@@ -209,25 +209,64 @@ hr.divider {
     background-color: #EBEBEB;
     border-radius: 0.5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         margin-left: 0px;
         margin-right: 0px;
     }
-}
 
-.scoreWrapper {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+    .scoreWrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .teamWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 50%;
+    }
+
+    .gameDetailsWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .envDetailsWrapper {
+        max-width: 75%;
+    }
+
+    .spreadDetailsWrapper {
+        text-align: end;
+    }
 }
 
 .teamWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    width: 50%;
+    padding: 20px 10px;
+    margin: 10px;
+    background-color: #EBEBEB;
+    border-radius: 0.5rem;
+
+    @media (max-width: 767px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .teamRecordsWrapper {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .teamRecordHeading {
+        text-decoration: underline;
+    }
 }
 
 .logoWrapper {
@@ -241,20 +280,6 @@ hr.divider {
         object-fit: cover;
         object-position: center;
     }
-}
-
-.gameDetailsWrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.envDetailsWrapper {
-    max-width: 75%;
-}
-
-.spreadDetailsWrapper {
-    text-align: end;
 }
 
 footer a {

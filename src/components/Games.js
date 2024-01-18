@@ -93,7 +93,7 @@ export default function Games({ gameData }) {
     return (
         <div className="mainWrapper container mw-100 px-4 px-md-5 py-4">
             {/* Filter Games */}
-            <Filters onChange={handleFilters} />
+            <Filters onChange={handleFilters} gameFilters={true} />
 
             {/* Display Games */}
             <div className="row d-flex mt-4 mb-5 w-100">
