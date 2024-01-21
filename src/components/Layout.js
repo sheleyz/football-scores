@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     return (
         <div>
             <Header />
-            <main className="mt-5 py-4 bg-white">{children}</main>
+            <main className="mt-5 py-4 bg-light">{children}</main>
             <Footer />
         </div>
     );

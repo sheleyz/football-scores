@@ -112,7 +112,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
     return (
         <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 mt-3">
             {gameFilters && (
-                <Form.Select className="bg-brand-light" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
+                <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
                     {teams.map((team) => (
                         <option value={team} key={team}>
@@ -123,7 +123,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
             )}
 
             {teamFilters && (
-                <Form.Select className="bg-brand-light" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
+                <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
                     {activeTeams.map((team) => (
                         <option value={team} key={team}>
@@ -134,7 +134,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
             )}
 
             {gameFilters && (
-                <Form.Select className="bg-brand-light" onChange={(e) => onChange("season", e.target.value)} aria-label="Select a season">
+                <Form.Select className="bg-white" onChange={(e) => onChange("season", e.target.value)} aria-label="Select a season">
                     <option value="all">All Seasons</option>
                     {seasons.map((season) => (
                         <option value={season} key={season}>
@@ -145,7 +145,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
             )}
 
             {gameFilters && (
-                <Form.Select className="bg-brand-light" onChange={(e) => onChange("week", e.target.value)} aria-label="Select a week">
+                <Form.Select className="bg-white" onChange={(e) => onChange("week", e.target.value)} aria-label="Select a week">
                     <option value="all">All Weeks</option>
                     {weeks.map((week) => (
                         <option value={week} key={week}>
@@ -160,7 +160,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
             )}
 
             {teamFilters && (
-                <Form.Select className="bg-brand-light" onChange={(e) => onChange("sort", e.target.value)} aria-label="Select a sort option">
+                <Form.Select className="bg-white" onChange={(e) => onChange("sort", e.target.value)} aria-label="Select a sort option">
                     <option value="none">Sort</option>
                     {sortOptions.map((option) => (
                         <option value={option} key={option}>
