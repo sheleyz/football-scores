@@ -123,6 +123,14 @@ body {
     }
 }
 
+.navbar-brand {
+    font-size: 1.1rem !important;
+
+    &:hover {
+        color: var(--brand-grey);
+    }
+}
+
 .navbar-toggler {
     border: none;
     color: var(--brand-grey);
