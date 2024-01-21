@@ -97,6 +97,7 @@ body {
 .navbar {
     --bs-navbar-nav-link-padding-x: 1rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 0rem !important;
 
     .nav-link {
         --bs-nav-link-padding-y: 0.75rem;
@@ -112,7 +113,11 @@ body {
             color: var(--brand-grey);
         }
 
-        @media (min-width: 768px) {
+        &:last-of-type {
+            padding-right: 0px;
+        }
+
+        @media (min-width: 576px) {
             --bs-nav-link-padding-y: 0rem;
         }
     }
@@ -234,10 +239,11 @@ hr.divider {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        padding: 0px 5px 5px 5px;
     }
 
     .envDetailsWrapper {
-        max-width: 75%;
+        max-width: 70%;
     }
 
     .spreadDetailsWrapper {
