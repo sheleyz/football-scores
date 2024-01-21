@@ -8,8 +8,8 @@ import Filters from "./Filters";
 import Game from "./Game";
 
 export default function Games({ gameData }) {
-    const [data, setData] = useState([]);
     const [limit, setLimit] = useState(16);
+    const [data, setData] = useState(gameData.slice(0, limit));
     const [filters, setFilters] = useState({
         team: "all",
         season: "all",
@@ -66,18 +66,8 @@ export default function Games({ gameData }) {
             filteredData = gameData.slice(0, limit);
         }
 
-        // console.log(filteredData);
         setData(filteredData.slice(0, limit));
     }, [filters, limit]);
-
-    useEffect(() => {
-        function getData() {
-            if (filters.team === "all" && filters.season === "all" && filters.week === "all") {
-                setData(gameData.slice(0, limit));
-            }
-        }
-        getData();
-    }, []);
 
     function handleLoadMore() {
         setLimit((prevLimit) => prevLimit + 16);
