@@ -79,6 +79,7 @@ body {
 
 .btn-brand-secondary {
     background-color: var(--brand-secondary) !important;
+    box-shadow: 0 2px 15px -3px rgba(0,0,0,0.20),0 10px 20px -2px rgba(0,0,0,0.20);
 
     &:hover,
     &:active {
@@ -100,7 +101,7 @@ body {
     padding: 0.75rem 0rem !important;
 
     .nav-link {
-        --bs-nav-link-padding-y: 0.75rem;
+        --bs-nav-link-padding-y: 5px;
         font-weight: 600;
         font-size: 1.1rem;
         color: var(--brand-light);
@@ -113,18 +114,28 @@ body {
             color: var(--brand-grey);
         }
 
+        &:first-of-type {
+            padding-top: 15px;
+        }
+
         &:last-of-type {
             padding-right: 0px;
         }
 
         @media (min-width: 576px) {
             --bs-nav-link-padding-y: 0rem;
+
+            &:first-of-type {
+                padding-top: inherit;
+            }
         }
     }
 }
 
 .navbar-brand {
     font-size: 1.1rem !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
     &:hover {
         color: var(--brand-grey);
