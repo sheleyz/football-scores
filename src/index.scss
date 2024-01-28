@@ -10,12 +10,14 @@
     --brand-grey-dark: #6c757d;
 
     --bs-body-bg: #003363;
+
+    --bs-body-font-size: 1.1rem;
 }
 
 html,
 body {
     background-color: var(--brand-secondary);
-    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .bg-brand-secondary {

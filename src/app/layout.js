@@ -6,10 +6,10 @@ config.autoAddCss = false;
 import localFont from "next/font/local";
 import Script from "next/script";
 
-const inter = localFont({
-    src: "./fonts/Inter/Inter-VariableFont_slnt_wght.ttf",
+const outfit = localFont({
+    src: "./fonts/Outfit/Outfit-VariableFont_wght.ttf",
     display: "swap",
-    variable: "--font-inter"
+    variable: "--font-outfit"
 });
 
 export const metadata = {
@@ -52,7 +52,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en-US">
-            <body className={inter.variable}>{children}</body>
+            <body className={outfit.variable}>{children}</body>
 
             {/* Google tag (gtag.js) */}
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H9K5XVBHBF"></Script>
