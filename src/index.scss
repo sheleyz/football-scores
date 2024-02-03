@@ -197,6 +197,10 @@ hr.divider {
         max-width: 900px !important;
     }
 
+    p {
+        color: #30373D;
+    }
+
     a {
         color: inherit;
 
@@ -256,11 +260,16 @@ hr.divider {
         width: 50%;
     }
 
+    .loser {
+        color: #64717D;
+    }
+
     .gameDetailsWrapper {
         width: 100%;
         display: flex;
         justify-content: space-between;
         padding: 0px 5px 5px 5px;
+        color: #30373D;
     }
 
     .envDetailsWrapper {

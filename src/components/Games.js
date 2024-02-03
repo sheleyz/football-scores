@@ -8,7 +8,7 @@ import Filters from "./Filters";
 import Game from "./Game";
 
 export default function Games({ gameData }) {
-    const [limit, setLimit] = useState(16);
+    const [limit, setLimit] = useState(15);
     const [data, setData] = useState(gameData.slice(0, limit));
     const [filters, setFilters] = useState({
         team: "all",
@@ -70,7 +70,7 @@ export default function Games({ gameData }) {
     }, [filters, limit]);
 
     function handleLoadMore() {
-        setLimit((prevLimit) => prevLimit + 16);
+        setLimit((prevLimit) => prevLimit + 15);
     }
 
     function handleFilters(type, value) {

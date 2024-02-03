@@ -124,7 +124,7 @@ export default function Team({ team }) {
         <div className="col-sm-12 col-md-6 col-lg-4 p-0">
             <div className="teamCardWrapper">
                 <div className="logoWrapper mb-2">{getTeamLogo(team.team_name)}</div>
-                <div className="teamName fw-bold text-center">{team.team_name}</div>
+                <div className="teamName fw-semibold text-center">{team.team_name}</div>
                 <div className="teamFirstYear text-center">Est. {team.franchise_first_year}</div>
                 <div className="teamRecordsWrapper">
                     <div className="teamRecordHeading">Overall Record</div>
