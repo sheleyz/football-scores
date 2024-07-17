@@ -13,7 +13,7 @@ import Game from "./Game";
 export default function Games() {
     const [limit, setLimit] = useState(15);
     let { games, loaded } = useTeamContext();
-    const [data, setData] = useState(games.slice(0, limit));
+    const [gameData, setGameData] = useState(games.slice(0, limit));
     const [noGamesFound, setNoGamesFound] = useState(false);
     const [filters, setFilters] = useState({
         team: "all",
@@ -23,66 +23,66 @@ export default function Games() {
 
     useEffect(() => {
         if (loaded) {
-            let filteredData = data;
+            let filteredGameData = gameData;
 
-            // Filter data if a team is selected
+            // Filter games if a team is selected
             if (filters.team !== "all" && filters.season === "all" && filters.week === "all") {
-                filteredData = games.filter((game) => {
+                filteredGameData = games.filter((game) => {
                     return game.team_home === filters.team || game.team_away === filters.team;
                 });
             }
-            // Filter data if a season is selected
+            // Filter games if a season is selected
             if (filters.team === "all" && filters.season !== "all" && filters.week === "all") {
-                filteredData = games.filter((game) => {
+                filteredGameData = games.filter((game) => {
                     return game.schedule_season === filters.season;
                 });
             }
-            // Filter data if a week is selected
+            // Filter games if a week is selected
             if (filters.team === "all" && filters.season === "all" && filters.week !== "all") {
-                filteredData = games.filter((game) => {
+                filteredGameData = games.filter((game) => {
                     return game.schedule_week === filters.week;
                 });
             }
-            // Filter data if a team and season are selected
+            // Filter games if a team and season are selected
             if (filters.team !== "all" && filters.season !== "all" && filters.week === "all") {
-                filteredData = games.filter((game) => {
+                filteredGameData = games.filter((game) => {
                     return (game.team_home === filters.team || game.team_away === filters.team) && game.schedule_season === filters.season;
                 });
             }
-            // Filter data if a team and week are selected
+            // Filter games if a team and week are selected
             if (filters.team !== "all" && filters.season === "all" && filters.week !== "all") {
-                filteredData = games.filter((game) => {
+                filteredGameData = games.filter((game) => {
                     return (game.team_home === filters.team || game.team_away === filters.team) && game.schedule_week === filters.week;
                 });
             }
-            // Filter data if a season and week are selected
+            // Filter games if a season and week are selected
             if (filters.team === "all" && filters.season !== "all" && filters.week !== "all") {
-                filteredData = games.filter((game) => {
+                filteredGameData = games.filter((game) => {
                     return game.schedule_season === filters.season && game.schedule_week === filters.week;
                 });
             }
-            // Filter data if a team, season, and week are selected
+            // Filter games if a team, season, and week are selected
             if (filters.team !== "all" && filters.season !== "all" && filters.week !== "all") {
-                filteredData = games.filter((game) => {
+                filteredGameData = games.filter((game) => {
                     return (game.team_home === filters.team || game.team_away === filters.team) && game.schedule_season === filters.season && game.schedule_week === filters.week;
                 });
             }
-            // Get default data if no filters are selected
+            // Get default games if no filters are selected
             if (filters.team === "all" && filters.season === "all" && filters.week === "all") {
-                filteredData = games.slice(0, limit);
+                filteredGameData = games.slice(0, limit);
             }
 
-            setData(filteredData.slice(0, limit));
+            setGameData(filteredGameData.slice(0, limit));
         }
     }, [loaded, filters, limit]);
 
     useEffect(() => {
-        if (loaded && data.length === 0) {
+        if (loaded && gameData.length === 0) {
             setNoGamesFound(true);
         } else {
             setNoGamesFound(false);
         }
-    }, [loaded, data]);
+    }, [loaded, gameData]);
 
     function handleLoadMore() {
         setLimit((prevLimit) => prevLimit + 15);
@@ -107,9 +107,9 @@ export default function Games() {
             )}
 
             {/* Display Games */}
-            {loaded && data.length !== 0 && (
+            {loaded && gameData.length !== 0 && (
                 <div className="row d-flex mt-4 mb-5 w-100">
-                    {data.map((game, index) => (
+                    {gameData.map((game, index) => (
                         <Game game={game} key={index} />
                     ))}
                 </div>
@@ -123,7 +123,7 @@ export default function Games() {
             )}
 
             {/* Load More Games */}
-            {limit <= data.length && data.length !== 0 && (
+            {limit <= gameData.length && gameData.length !== 0 && (
                 <div className="d-flex justify-content-center align-items-center w-100">
                     <Button data-bs-theme="dark" size="lg" onClick={handleLoadMore} className="btn-brand-secondary border-0">
                         Load More
