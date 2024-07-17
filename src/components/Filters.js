@@ -109,6 +109,8 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
     }
     // Sort Seasons in Descending Order
     seasons.sort((a, b) => b - a);
+    // Sort Weeks in Descending Order
+    weeks.sort((a, b) => b - a);
     return (
         <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 my-3">
             {gameFilters && (
@@ -147,15 +149,15 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
             {gameFilters && (
                 <Form.Select className="bg-white" onChange={(e) => onChange("week", e.target.value)} aria-label="Select a week">
                     <option value="all">All Weeks</option>
+                    <option value="Superbowl">Super Bowl</option>
+                    <option value="Conference">Conference</option>
+                    <option value="Division">Division</option>
+                    <option value="Wildcard">Wild Card</option>
                     {weeks.map((week) => (
                         <option value={week} key={week}>
                             Week {week}
                         </option>
                     ))}
-                    <option value="Wildcard">Wild Card</option>
-                    <option value="Division">Division</option>
-                    <option value="Conference">Conference</option>
-                    <option value="Superbowl">Super Bowl</option>
                 </Form.Select>
             )}
 
