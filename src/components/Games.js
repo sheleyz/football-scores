@@ -108,7 +108,7 @@ export default function Games() {
 
             {/* Display Games */}
             {loaded && gameData.length !== 0 && (
-                <div className="row d-flex mt-4 mb-5 w-100">
+                <div className={`gamesWrapper row d-flex mt-4 mb-5 w-100 ${gameData.length < 3 && "justify-content-center"}`}>
                     {gameData.map((game, index) => (
                         <Game game={game} key={index} />
                     ))}

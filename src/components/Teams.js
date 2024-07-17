@@ -95,7 +95,7 @@ export default function Teams() {
 
             {/* Display Teams */}
             {loaded && (
-                <div className="row d-flex mt-4 mb-5 w-100">
+                <div className={`teamsWrapper row d-flex mt-4 mb-5 w-100 ${teamData.length < 3 && "justify-content-center"}`}>
                     {teamData.map((team, index) => (
                         <Team team={team} key={index} />
                     ))}

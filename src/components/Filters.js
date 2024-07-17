@@ -110,7 +110,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
     // Sort Seasons in Descending Order
     seasons.sort((a, b) => b - a);
     return (
-        <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 mt-3">
+        <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 my-3">
             {gameFilters && (
                 <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
