@@ -16,7 +16,7 @@ const outfit = localFont({
 export const metadata = {
     title: "Football Scores",
     description: "Football Scores provides final scores, betting odds (when available), and other details for all NFL games since 1966.",
-    image: "./icon.png",
+    image: "./opengraph-image.png",
     metadataBase: new URL("https://nflscores.vercel.app"),
 
     openGraph: {
@@ -24,7 +24,7 @@ export const metadata = {
         description: "Football Scores provides final scores, betting odds (when available), and other details for all NFL games since 1966.",
         url: "https://nflscores.vercel.app",
         siteName: "Football Scores",
-        images: ["./icon.png"],
+        images: ["./opengraph-image.png"],
         locale: "en_US",
         type: "website"
     },
@@ -33,7 +33,7 @@ export const metadata = {
         card: "summary",
         title: "Football Scores",
         description: "Football Scores provides final scores, betting odds (when available), and other details for all NFL games since 1966.",
-        images: ["./icon.png"],
+        images: ["./opengraph-image.png"],
         url: "https://nflscores.vercel.app"
     },
 
