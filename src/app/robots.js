@@ -2,7 +2,7 @@ export default function robots() {
     return {
         rules: [
             {
-                userAgent: ["Google-Extended", "ChatGPT-User", "GPTBot", "CCBot", "PerplexityBot", "anthropic-ai", "Claude-Web", "ClaudeBot"],
+                userAgent: ["Google-Extended", "Applebot-Extended", "ChatGPT-User", "GPTBot", "CCBot", "PerplexityBot", "anthropic-ai", "Claude-Web", "ClaudeBot"],
                 disallow: "/"
             },
             {
