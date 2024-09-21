@@ -100,7 +100,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
         "Division Champions Asc"
     ];
     // List Seasons
-    for (let index = 1966; index < 2024; index++) {
+    for (let index = 1966; index < 2025; index++) {
         seasons.push(index);
     }
     // List Weeks

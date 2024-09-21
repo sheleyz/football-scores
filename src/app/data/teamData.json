@@ -1,6 +1,7 @@
 [
     {
         "team_name": "San Francisco 49ers",
+        "team_name_short": "49ers",
         "franchise_first_year": "1946",
         "franchise_wins": "625",
         "franchise_losses": "516",
@@ -17,6 +18,7 @@
     },
     {
         "team_name": "Chicago Bears",
+        "team_name_short": "Bears",
         "franchise_first_year": "1920",
         "franchise_wins": "794",
         "franchise_losses": "635",
@@ -33,6 +35,7 @@
     },
     {
         "team_name": "Cincinnati Bengals",
+        "team_name_short": "Bengals",
         "franchise_first_year": "1968",
         "franchise_wins": "394",
         "franchise_losses": "473",
@@ -49,6 +52,7 @@
     },
     {
         "team_name": "Buffalo Bills",
+        "team_name_short": "Bills",
         "franchise_first_year": "1960",
         "franchise_wins": "475",
         "franchise_losses": "501",
@@ -65,6 +69,7 @@
     },
     {
         "team_name": "Denver Broncos",
+        "team_name_short": "Broncos",
         "franchise_first_year": "1960",
         "franchise_wins": "508",
         "franchise_losses": "467",
@@ -81,6 +86,7 @@
     },
     {
         "team_name": "Cleveland Browns",
+        "team_name_short": "Browns",
         "franchise_first_year": "1946",
         "franchise_wins": "560",
         "franchise_losses": "535",
@@ -97,6 +103,7 @@
     },
     {
         "team_name": "Tampa Bay Buccaneers",
+        "team_name_short": "Buccaneers",
         "franchise_first_year": "1976",
         "franchise_wins": "310",
         "franchise_losses": "450",
@@ -113,6 +120,7 @@
     },
     {
         "team_name": "Arizona Cardinals",
+        "team_name_short": "Cardinals",
         "franchise_first_year": "1920",
         "franchise_wins": "586",
         "franchise_losses": "804",
@@ -129,6 +137,7 @@
     },
     {
         "team_name": "Los Angeles Chargers",
+        "team_name_short": "Chargers",
         "franchise_first_year": "1960",
         "franchise_wins": "485",
         "franchise_losses": "489",
@@ -145,6 +154,7 @@
     },
     {
         "team_name": "Kansas City Chiefs",
+        "team_name_short": "Chiefs",
         "franchise_first_year": "1960",
         "franchise_wins": "534",
         "franchise_losses": "439",
@@ -161,6 +171,7 @@
     },
     {
         "team_name": "Indianapolis Colts",
+        "team_name_short": "Colts",
         "franchise_first_year": "1953",
         "franchise_wins": "556",
         "franchise_losses": "503",
@@ -177,6 +188,7 @@
     },
     {
         "team_name": "Washington Commanders",
+        "team_name_short": "Commanders",
         "franchise_first_year": "1932",
         "franchise_wins": "630",
         "franchise_losses": "644",
@@ -193,6 +205,7 @@
     },
     {
         "team_name": "Dallas Cowboys",
+        "team_name_short": "Cowboys",
         "franchise_first_year": "1960",
         "franchise_wins": "563",
         "franchise_losses": "414",
@@ -209,6 +222,7 @@
     },
     {
         "team_name": "Miami Dolphins",
+        "team_name_short": "Dolphins",
         "franchise_first_year": "1966",
         "franchise_wins": "497",
         "franchise_losses": "400",
@@ -225,6 +239,7 @@
     },
     {
         "team_name": "Philadelphia Eagles",
+        "team_name_short": "Eagles",
         "franchise_first_year": "1933",
         "franchise_wins": "625",
         "franchise_losses": "637",
@@ -241,6 +256,7 @@
     },
     {
         "team_name": "Atlanta Falcons",
+        "team_name_short": "Falcons",
         "franchise_first_year": "1966",
         "franchise_wins": "391",
         "franchise_losses": "504",
@@ -257,6 +273,7 @@
     },
     {
         "team_name": "New York Giants",
+        "team_name_short": "Giants",
         "franchise_first_year": "1925",
         "franchise_wins": "721",
         "franchise_losses": "651",
@@ -273,6 +290,7 @@
     },
     {
         "team_name": "Jacksonville Jaguars",
+        "team_name_short": "Jaguars",
         "franchise_first_year": "1995",
         "franchise_wins": "198",
         "franchise_losses": "271",
@@ -289,6 +307,7 @@
     },
     {
         "team_name": "New York Jets",
+        "team_name_short": "Jets",
         "franchise_first_year": "1960",
         "franchise_wins": "429",
         "franchise_losses": "548",
@@ -305,6 +324,7 @@
     },
     {
         "team_name": "Detroit Lions",
+        "team_name_short": "Lions",
         "franchise_first_year": "1930",
         "franchise_wins": "592",
         "franchise_losses": "708",
@@ -321,6 +341,7 @@
     },
     {
         "team_name": "Green Bay Packers",
+        "team_name_short": "Packers",
         "franchise_first_year": "1921",
         "franchise_wins": "800",
         "franchise_losses": "599",
@@ -337,6 +358,7 @@
     },
     {
         "team_name": "Carolina Panthers",
+        "team_name_short": "Panthers",
         "franchise_first_year": "1995",
         "franchise_wins": "214",
         "franchise_losses": "254",
@@ -353,6 +375,7 @@
     },
     {
         "team_name": "New England Patriots",
+        "team_name_short": "Patriots",
         "franchise_first_year": "1960",
         "franchise_wins": "542",
         "franchise_losses": "434",
@@ -369,6 +392,7 @@
     },
     {
         "team_name": "Las Vegas Raiders",
+        "team_name_short": "Raiders",
         "franchise_first_year": "1960",
         "franchise_wins": "506",
         "franchise_losses": "468",
@@ -385,6 +409,7 @@
     },
     {
         "team_name": "Los Angeles Rams",
+        "team_name_short": "Rams",
         "franchise_first_year": "1937",
         "franchise_wins": "614",
         "franchise_losses": "601",
@@ -401,6 +426,7 @@
     },
     {
         "team_name": "Baltimore Ravens",
+        "team_name_short": "Ravens",
         "franchise_first_year": "1996",
         "franchise_wins": "256",
         "franchise_losses": "196",
@@ -417,6 +443,7 @@
     },
     {
         "team_name": "New Orleans Saints",
+        "team_name_short": "Saints",
         "franchise_first_year": "1967",
         "franchise_wins": "414",
         "franchise_losses": "468",
@@ -433,6 +460,7 @@
     },
     {
         "team_name": "Seattle Seahawks",
+        "team_name_short": "Seahawks",
         "franchise_first_year": "1976",
         "franchise_wins": "394",
         "franchise_losses": "366",
@@ -449,6 +477,7 @@
     },
     {
         "team_name": "Pittsburgh Steelers",
+        "team_name_short": "Steelers",
         "franchise_first_year": "1933",
         "franchise_wins": "673",
         "franchise_losses": "578",
@@ -465,6 +494,7 @@
     },
     {
         "team_name": "Houston Texans",
+        "team_name_short": "Texans",
         "franchise_first_year": "2002",
         "franchise_wins": "154",
         "franchise_losses": "202",
@@ -481,6 +511,7 @@
     },
     {
         "team_name": "Tennessee Titans",
+        "team_name_short": "Titans",
         "franchise_first_year": "1960",
         "franchise_wins": "476",
         "franchise_losses": "503",
@@ -497,6 +528,7 @@
     },
     {
         "team_name": "Minnesota Vikings",
+        "team_name_short": "Vikings",
         "franchise_first_year": "1961",
         "franchise_wins": "525",
         "franchise_losses": "435",

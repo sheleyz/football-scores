@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTeamContext } from "../app/context/TeamContext";
 
 // Images
 import sf49ers from "../images/logos/49ers.webp";
@@ -37,6 +38,7 @@ import titans from "../images/logos/titans.webp";
 import vikings from "../images/logos/vikings.webp";
 
 export default function Game({ game }) {
+    const { teams } = useTeamContext();
     const getTeamLogo = (teamName) => {
         switch (teamName) {
             case "San Francisco 49ers":
@@ -120,6 +122,11 @@ export default function Game({ game }) {
         }
     };
 
+    const getShortTeamName = (teamName) => {
+        const team = teams.find((team) => team.team_name === teamName);
+        return team.team_name_short;
+    };
+
     const convertWeekName = (weekName) => {
         switch (weekName) {
             case "Wildcard":
@@ -142,14 +149,14 @@ export default function Game({ game }) {
                     <div className={`teamWrapper ${Number(game.score_home) > Number(game.score_away) ? "fw-medium" : "loser"}`}>
                         <div className="logoNameWrapper">
                             <div className="logoWrapper">{getTeamLogo(game.team_home)}</div>
-                            <div className="teamName">{game.team_home}</div>
+                            <div className="teamName">{getShortTeamName(game.team_home)}</div>
                         </div>
                         <div className="teamScore">{game.score_home}</div>
                     </div>
                     <div className={`teamWrapper ${Number(game.score_away) > Number(game.score_home) ? "fw-medium" : "loser"}`}>
                         <div className="logoNameWrapper">
                             <div className="logoWrapper">{getTeamLogo(game.team_away)}</div>
-                            <div className="teamName">{game.team_away}</div>
+                            <div className="teamName">{getShortTeamName(game.team_away)}</div>
                         </div>
                         <div className="teamScore">{game.score_away}</div>
                     </div>
