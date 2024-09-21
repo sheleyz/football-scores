@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useTeamContext } from "../app/context/TeamContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 // Images
 import sf49ers from "../images/logos/49ers.webp";
@@ -151,14 +153,28 @@ export default function Game({ game }) {
                             <div className="logoWrapper">{getTeamLogo(game.team_home)}</div>
                             <div className="teamName">{getShortTeamName(game.team_home)}</div>
                         </div>
-                        <div className="teamScore">{game.score_home}</div>
+                        <div className="scoreWinnerWrapper">
+                            {Number(game.score_home) > Number(game.score_away) && (
+                                <div className="winnerIcon me-2">
+                                    <FontAwesomeIcon icon={faCaretRight} />
+                                </div>
+                            )}
+                            <div className="teamScore">{game.score_home}</div>
+                        </div>
                     </div>
                     <div className={`teamWrapper ${Number(game.score_away) > Number(game.score_home) ? "fw-medium" : "loser"}`}>
                         <div className="logoNameWrapper">
                             <div className="logoWrapper">{getTeamLogo(game.team_away)}</div>
                             <div className="teamName">{getShortTeamName(game.team_away)}</div>
                         </div>
-                        <div className="teamScore">{game.score_away}</div>
+                        <div className="scoreWinnerWrapper">
+                            {Number(game.score_away) > Number(game.score_home) && (
+                                <div className="winnerIcon me-2">
+                                    <FontAwesomeIcon icon={faCaretRight} />
+                                </div>
+                            )}
+                            <div className="teamScore">{game.score_away}</div>
+                        </div>
                     </div>
                 </div>
                 <div className="gameDetailsWrapper">
