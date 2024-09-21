@@ -259,6 +259,20 @@ hr.divider {
         margin-right: 0px;
     }
 
+    .logoWrapper {
+        height: 50px;
+        width: 50px;
+        overflow: hidden;
+        margin-right: 0.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
     .scoreWrapper {
         display: flex;
         justify-content: center;
@@ -281,7 +295,8 @@ hr.divider {
         color: #64717D;
     }
 
-    .logoNameWrapper, .scoreWinnerWrapper {
+    .logoNameWrapper,
+    .scoreWinnerWrapper {
         display: flex;
         align-items: center;
     }
@@ -322,6 +337,19 @@ hr.divider {
         margin-right: 0px;
     }
 
+    .logoWrapper {
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
     .teamRecordsWrapper {
         text-align: center;
         margin-top: 10px;
@@ -330,20 +358,6 @@ hr.divider {
 
     .teamRecordHeading {
         text-decoration: underline;
-    }
-}
-
-.logoWrapper {
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
-    margin-right: 0.5rem;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
     }
 }
 
