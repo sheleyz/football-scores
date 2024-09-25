@@ -126,7 +126,13 @@ export default function Game({ game }) {
 
     const getShortTeamName = (teamName) => {
         const team = teams.find((team) => team.team_name === teamName);
-        return team.team_name_short;
+        let teamNameShort;
+        if (team) {
+            teamNameShort = team.team_name_short;
+        } else {
+            teamNameShort = teamName;
+        }
+        return teamNameShort;
     };
 
     const convertWeekName = (weekName) => {
