@@ -240,7 +240,8 @@ hr.divider {
 
 .gamesWrapper,
 .teamsWrapper,
-.messageWrapper {
+.messageWrapper,
+.compareWrapper {
     min-height: 20rem;
 }
 
@@ -358,6 +359,64 @@ hr.divider {
 
     .teamRecordHeading {
         text-decoration: underline;
+    }
+}
+
+.compareCardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+
+    @media (max-width: 767px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .logoWrapper {
+        height: 5rem;
+        width: 5rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .teamInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        padding-top: 0.3rem;
+        padding-bottom: 1rem;
+        width: 50%;
+    }
+
+    table {
+        --bs-table-bg: white;
+        margin-bottom: 0;
+
+        td {
+            font-size: 1rem;
+            vertical-align: middle;
+        }
+    }
+
+    .teamFirstYear {
+        font-size: 1rem;
+    }
+
+    .teamsSection {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
