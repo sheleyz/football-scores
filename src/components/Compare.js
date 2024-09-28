@@ -194,101 +194,101 @@ export default function Compare() {
                             <Table bordered responsive size="sm">
                                 <tbody>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_wins) > Number(team2Details.franchise_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_wins > team2Details.franchise_wins && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_wins}</div>
                                         </td>
                                         <td>Wins</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_wins) < Number(team2Details.franchise_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_wins < team2Details.franchise_wins && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_wins}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_losses) < Number(team2Details.franchise_losses) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_losses < team2Details.franchise_losses && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_losses}</div>
                                         </td>
                                         <td>Losses</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_losses) > Number(team2Details.franchise_losses) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_losses > team2Details.franchise_losses && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_losses}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_ties) > Number(team2Details.franchise_ties) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_ties > team2Details.franchise_ties && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_ties}</div>
                                         </td>
                                         <td>Ties</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_ties) < Number(team2Details.franchise_ties) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_ties < team2Details.franchise_ties && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_ties}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_win_loss_percentage * 100) > Number(team2Details.franchise_win_loss_percentage * 100) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_win_loss_percentage > team2Details.franchise_win_loss_percentage && "bg-brand-green-light"}`}>
                                             <div>{(team1Details.franchise_win_loss_percentage * 100).toFixed(1)}%</div>
                                         </td>
                                         <td>Win %</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_win_loss_percentage * 100) < Number(team2Details.franchise_win_loss_percentage * 100) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_win_loss_percentage < team2Details.franchise_win_loss_percentage && "bg-brand-green-light"}`}>
                                             <div>{(team2Details.franchise_win_loss_percentage * 100).toFixed(1)}%</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_playoff_wins) > Number(team2Details.franchise_playoff_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_playoff_wins > team2Details.franchise_playoff_wins && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_playoff_wins}</div>
                                         </td>
                                         <td>Playoff Wins</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_playoff_wins) < Number(team2Details.franchise_playoff_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_playoff_wins < team2Details.franchise_playoff_wins && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_playoff_wins}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_playoff_losses) < Number(team2Details.franchise_playoff_losses) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_playoff_losses < team2Details.franchise_playoff_losses && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_playoff_losses}</div>
                                         </td>
                                         <td>Playoff Losses</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_playoff_losses) > Number(team2Details.franchise_playoff_losses) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_playoff_losses > team2Details.franchise_playoff_losses && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_playoff_losses}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_playoff_win_loss_percentage * 100) > Number(team2Details.franchise_playoff_win_loss_percentage * 100) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_playoff_win_loss_percentage > team2Details.franchise_playoff_win_loss_percentage && "bg-brand-green-light"}`}>
                                             <div>{(team1Details.franchise_playoff_win_loss_percentage * 100).toFixed(1)}%</div>
                                         </td>
                                         <td>Playoff Win %</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_playoff_win_loss_percentage * 100) < Number(team2Details.franchise_playoff_win_loss_percentage * 100) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_playoff_win_loss_percentage < team2Details.franchise_playoff_win_loss_percentage && "bg-brand-green-light"}`}>
                                             <div>{(team2Details.franchise_playoff_win_loss_percentage * 100).toFixed(1)}%</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_championship_wins) > Number(team2Details.franchise_championship_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_championship_wins > team2Details.franchise_championship_wins && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_championship_wins}</div>
                                         </td>
                                         <td>Championship Wins</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_championship_wins) < Number(team2Details.franchise_championship_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_championship_wins < team2Details.franchise_championship_wins && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_championship_wins}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_superbowl_wins) > Number(team2Details.franchise_superbowl_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_superbowl_wins > team2Details.franchise_superbowl_wins && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_superbowl_wins}</div>
                                         </td>
                                         <td>Super Bowl Wins</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_superbowl_wins) < Number(team2Details.franchise_superbowl_wins) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_superbowl_wins < team2Details.franchise_superbowl_wins && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_superbowl_wins}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_conference_champions) > Number(team2Details.franchise_conference_champions) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_conference_champions > team2Details.franchise_conference_champions && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_conference_champions}</div>
                                         </td>
                                         <td>Conference Champions</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_conference_champions) < Number(team2Details.franchise_conference_champions) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_conference_champions < team2Details.franchise_conference_champions && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_conference_champions}</div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td className={`teamStat ${Number(team1Details.franchise_division_champions) > Number(team2Details.franchise_division_champions) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_division_champions > team2Details.franchise_division_champions && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_division_champions}</div>
                                         </td>
                                         <td>Division Champions</td>
-                                        <td className={`teamStat ${Number(team1Details.franchise_division_champions) < Number(team2Details.franchise_division_champions) && "bg-brand-green-light"}`}>
+                                        <td className={`teamStat ${team1Details.franchise_division_champions < team2Details.franchise_division_champions && "bg-brand-green-light"}`}>
                                             <div>{team2Details.franchise_division_champions}</div>
                                         </td>
                                     </tr>
