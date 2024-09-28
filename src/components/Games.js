@@ -15,7 +15,7 @@ export default function Games({team1, team2}) {
     let { games, teams, loaded } = useTeamContext();
     if (team1 && team2) {
         games = games.filter((game) => {
-            return (game.team_home === team1.team_name && game.team_away === team2.team_name) || (game.team_home === team2.team_name && game.team_away === team1.team_name);
+            return ((game.team_home === team1.team_name || team1.team_name_old.includes(game.team_home)) && (game.team_away === team2.team_name || team2.team_name_old.includes(game.team_away))) || ((game.team_home === team2.team_name || team2.team_name_old.includes(game.team_home)) && (game.team_away === team1.team_name || team1.team_name_old.includes(game.team_away)));
         });
     }
     const [gameData, setGameData] = useState(games.slice(0, limit));
