@@ -8,6 +8,7 @@
 
     --brand-grey: #C0C0C0;
     --brand-grey-dark: #6c757d;
+    --brand-green-light: #C7EFE0;
 
     --bs-body-bg: #003363;
 
@@ -26,6 +27,10 @@ body {
 
 .bg-brand-light {
     background-color: var(--brand-light);
+}
+
+.bg-brand-green-light {
+    background-color: var(--brand-green-light) !important;
 }
 
 .text-grey {
