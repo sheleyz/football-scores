@@ -102,7 +102,7 @@ export default function Games({team1, team2}) {
     }
 
     return (
-        <div className="mainWrapper container mw-100 px-4 px-md-5 py-4">
+        <div className={`mainWrapper mw-100 ${!team1 && !team2 && "container px-3 px-md-5 py-4"}`}>
             {/* Filter Games */}
             <Filters onChange={handleFilters} gameFilters={true} compareFilters={team1 && team2} />
 

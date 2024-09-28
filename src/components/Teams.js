@@ -83,7 +83,7 @@ export default function Teams() {
     }
 
     return (
-        <div className="mainWrapper container mw-100 px-4 px-md-5 py-4">
+        <div className="mainWrapper container mw-100 px-3 px-md-5 py-4">
             {/* Filter Teams */}
             <Filters onChange={handleFilters} teamFilters={true} />
 

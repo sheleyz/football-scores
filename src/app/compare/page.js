@@ -5,7 +5,7 @@ import Compare from "../../components/Compare";
 export default function ComparePage() {
     return (
         <Layout>
-            <div className="heroIntro d-flex flex-column align-items-center container px-4 px-md-5 pt-5">
+            <div className="heroIntro d-flex flex-column align-items-center container px-3 px-md-5 pt-5">
                 <h1 className="text-center mb-3">Compare Football Teams</h1>
                 <p className="mb-0">Use the dropdown menus to select two teams in order to compare their stats and matchup history.</p>
             </div>

@@ -156,7 +156,7 @@ export default function Compare() {
     };
 
     return (
-        <div className="mainWrapper container mw-100 px-2 px-md-5 py-4">
+        <div className="mainWrapper container mw-100 px-3 px-md-5 py-4">
             <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 my-3">
                 <Form.Select className="bg-white" onChange={(e) => handleSelections("team1", e.target.value)} aria-label="Select a team">
                     <option value="none">Team 1</option>

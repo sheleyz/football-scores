@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer className="bg-brand-secondary">
-            <div className="footerText container d-flex flex-column align-items-center px-4 px-lg-5 pt-4 fw-semibold">
+            <div className="footerText container d-flex flex-column align-items-center px-3 px-lg-5 pt-4 fw-semibold">
                 <div className="text-center pt-4 pb-3 fw-normal text-white">
                     <p className="mb-0"><i>Game data updated through 9/16/2024.</i></p>
                     <p><i>Team data updated through 9/16/2024.</i></p>
