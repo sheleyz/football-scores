@@ -157,7 +157,7 @@ export default function Game({ game }) {
                     <div className={`teamWrapper ${Number(game.score_home) > Number(game.score_away) ? "fw-medium" : "loser"}`}>
                         <div className="logoNameWrapper">
                             <div className="logoWrapper">{getTeamLogo(game.team_home)}</div>
-                            <div className="teamName">{getShortTeamName(game.team_home)}</div>
+                            <div className="teamName me-2">{getShortTeamName(game.team_home)}</div>
                         </div>
                         <div className="scoreWinnerWrapper">
                             {Number(game.score_home) > Number(game.score_away) && (
@@ -171,7 +171,7 @@ export default function Game({ game }) {
                     <div className={`teamWrapper ${Number(game.score_away) > Number(game.score_home) ? "fw-medium" : "loser"}`}>
                         <div className="logoNameWrapper">
                             <div className="logoWrapper">{getTeamLogo(game.team_away)}</div>
-                            <div className="teamName">{getShortTeamName(game.team_away)}</div>
+                            <div className="teamName me-2">{getShortTeamName(game.team_away)}</div>
                         </div>
                         <div className="scoreWinnerWrapper">
                             {Number(game.score_away) > Number(game.score_home) && (

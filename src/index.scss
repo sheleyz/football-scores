@@ -270,6 +270,7 @@ hr.divider {
         width: 50px;
         overflow: hidden;
         margin-right: 0.5rem;
+        flex-shrink: 0;
 
         img {
             width: 100%;
@@ -347,6 +348,7 @@ hr.divider {
         height: 100px;
         width: 100px;
         overflow: hidden;
+        flex-shrink: 0;
 
         img {
             width: 100%;
@@ -386,6 +388,7 @@ hr.divider {
         height: 5rem;
         width: 5rem;
         overflow: hidden;
+        flex-shrink: 0;
 
         img {
             width: 100%;
