@@ -24,7 +24,7 @@ export default function Teams() {
             if (filters.team !== "all") {
                 // Filter teams if a team is selected
                 filteredTeamData = teams.filter((team) => {
-                    return team.team_name === filters.team;
+                    return team.team_name_short === filters.team;
                 });
             } else {
                 // Sort teams if a team is not selected

@@ -39,8 +39,8 @@ export default function Filters({ onChange, gameFilters, teamFilters, compareFil
                 <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
                     {teams.map((team) => (
-                        <option value={team.team_name} key={team.team_name}>
-                            {team.team_name}
+                        <option value={team.team_name_short} key={team.team_name_short}>
+                            {team.team_name_short}
                         </option>
                     ))}
                 </Form.Select>
@@ -50,8 +50,8 @@ export default function Filters({ onChange, gameFilters, teamFilters, compareFil
                 <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
                     {teams.map((team) => (
-                        <option value={team.team_name} key={team.team_name}>
-                            {team.team_name}
+                        <option value={team.team_name_short} key={team.team_name_short}>
+                            {team.team_name_short}
                         </option>
                     ))}
                 </Form.Select>

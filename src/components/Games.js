@@ -29,7 +29,7 @@ export default function Games({team1, team2}) {
     useEffect(() => {
         if (loaded) {
             let filteredGameData = gameData;
-            let selectedTeam = teams.find((team) => team.team_name === filters.team || team.team_name_old.includes(filters.team));
+            let selectedTeam = teams.find((team) => team.team_name_short === filters.team);
 
             // Filter games if a team is selected
             if (filters.team !== "all" && filters.season === "all" && filters.week === "all") {
