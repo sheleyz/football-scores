@@ -158,7 +158,7 @@ export default function Compare() {
         <div className="mainWrapper container mw-100 px-2 px-md-5 py-4">
             <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 my-3">
                 <Form.Select className="bg-white" onChange={(e) => handleSelections("team1", e.target.value)} aria-label="Select a team">
-                    <option value="all">Team 1</option>
+                    <option value="none">Team 1</option>
                     {teams.map((team) => (
                         <option value={team.team_name_short} key={team.team_name_short}>
                             {team.team_name_short}
@@ -166,7 +166,7 @@ export default function Compare() {
                     ))}
                 </Form.Select>
                 <Form.Select className="bg-white" onChange={(e) => handleSelections("team2", e.target.value)} aria-label="Select a team">
-                    <option value="all">Team 2</option>
+                    <option value="none">Team 2</option>
                     {teams.map((team) => (
                         <option value={team.team_name_short} key={team.team_name_short}>
                             {team.team_name_short}
