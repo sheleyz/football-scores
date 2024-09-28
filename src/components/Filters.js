@@ -1,88 +1,10 @@
 "use client";
 
+import { useTeamContext } from "../app/context/TeamContext";
 import Form from "react-bootstrap/Form";
 
 export default function Filters({ onChange, gameFilters, teamFilters, compareFilters }) {
-    let teams = [
-        "San Francisco 49ers",
-        "Chicago Bears",
-        "Cincinnati Bengals",
-        "Buffalo Bills",
-        "Denver Broncos",
-        "Cleveland Browns",
-        "Tampa Bay Buccaneers",
-        "Arizona Cardinals",
-        "Phoenix Cardinals",
-        "St. Louis Cardinals",
-        "Los Angeles Chargers",
-        "San Diego Chargers",
-        "Kansas City Chiefs",
-        "Indianapolis Colts",
-        "Baltimore Colts",
-        "Washington Commanders",
-        "Washington Football Team",
-        "Washington Redskins",
-        "Dallas Cowboys",
-        "Miami Dolphins",
-        "Philadelphia Eagles",
-        "Atlanta Falcons",
-        "New York Giants",
-        "Jacksonville Jaguars",
-        "New York Jets",
-        "Detroit Lions",
-        "Green Bay Packers",
-        "Carolina Panthers",
-        "New England Patriots",
-        "Boston Patriots",
-        "Las Vegas Raiders",
-        "Los Angeles Raiders",
-        "Oakland Raiders",
-        "Los Angeles Rams",
-        "St. Louis Rams",
-        "Baltimore Ravens",
-        "New Orleans Saints",
-        "Seattle Seahawks",
-        "Pittsburgh Steelers",
-        "Houston Texans",
-        "Houston Oilers",
-        "Tennessee Titans",
-        "Tennessee Oilers",
-        "Minnesota Vikings"
-    ];
-    let activeTeams = [
-        "San Francisco 49ers",
-        "Chicago Bears",
-        "Cincinnati Bengals",
-        "Buffalo Bills",
-        "Denver Broncos",
-        "Cleveland Browns",
-        "Tampa Bay Buccaneers",
-        "Arizona Cardinals",
-        "Los Angeles Chargers",
-        "Kansas City Chiefs",
-        "Indianapolis Colts",
-        "Washington Commanders",
-        "Dallas Cowboys",
-        "Miami Dolphins",
-        "Philadelphia Eagles",
-        "Atlanta Falcons",
-        "New York Giants",
-        "Jacksonville Jaguars",
-        "New York Jets",
-        "Detroit Lions",
-        "Green Bay Packers",
-        "Carolina Panthers",
-        "New England Patriots",
-        "Las Vegas Raiders",
-        "Los Angeles Rams",
-        "Baltimore Ravens",
-        "New Orleans Saints",
-        "Seattle Seahawks",
-        "Pittsburgh Steelers",
-        "Houston Texans",
-        "Tennessee Titans",
-        "Minnesota Vikings"
-    ];
+    const { teams } = useTeamContext();
     let seasons = [];
     let weeks = [];
     let sortOptions = [
@@ -117,8 +39,8 @@ export default function Filters({ onChange, gameFilters, teamFilters, compareFil
                 <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
                     {teams.map((team) => (
-                        <option value={team} key={team}>
-                            {team}
+                        <option value={team.team_name} key={team.team_name}>
+                            {team.team_name}
                         </option>
                     ))}
                 </Form.Select>
@@ -127,9 +49,9 @@ export default function Filters({ onChange, gameFilters, teamFilters, compareFil
             {teamFilters && (
                 <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
-                    {activeTeams.map((team) => (
-                        <option value={team} key={team}>
-                            {team}
+                    {teams.map((team) => (
+                        <option value={team.team_name} key={team.team_name}>
+                            {team.team_name}
                         </option>
                     ))}
                 </Form.Select>
