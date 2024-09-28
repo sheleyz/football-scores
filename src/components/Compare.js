@@ -132,24 +132,13 @@ export default function Compare() {
         }
     };
 
-    const getShortTeamName = (teamName) => {
-        const team = teams.find((team) => team.team_name === teamName);
-        let teamNameShort;
-        if (team) {
-            teamNameShort = team.team_name_short;
-        } else {
-            teamNameShort = teamName;
-        }
-        return teamNameShort;
-    };
-
     useEffect(() => {
         if (loaded) {
             const { team1, team2 } = selections;
 
             if (team1 !== "none" && team2 !== "none") {
-                const team1Stats = teams.find((team) => team.team_name === team1);
-                const team2Stats = teams.find((team) => team.team_name === team2);
+                const team1Stats = teams.find((team) => team.team_name_short === team1);
+                const team2Stats = teams.find((team) => team.team_name_short === team2);
                 setTeam1Details(team1Stats);
                 setTeam2Details(team2Stats);
                 // console.log(team1Stats);
@@ -171,16 +160,16 @@ export default function Compare() {
                 <Form.Select className="bg-white" onChange={(e) => handleSelections("team1", e.target.value)} aria-label="Select a team">
                     <option value="all">Team 1</option>
                     {teams.map((team) => (
-                        <option value={team.team_name} key={team.team_name}>
-                            {team.team_name}
+                        <option value={team.team_name_short} key={team.team_name_short}>
+                            {team.team_name_short}
                         </option>
                     ))}
                 </Form.Select>
                 <Form.Select className="bg-white" onChange={(e) => handleSelections("team2", e.target.value)} aria-label="Select a team">
                     <option value="all">Team 2</option>
                     {teams.map((team) => (
-                        <option value={team.team_name} key={team.team_name}>
-                            {team.team_name}
+                        <option value={team.team_name_short} key={team.team_name_short}>
+                            {team.team_name_short}
                         </option>
                     ))}
                 </Form.Select>
@@ -192,12 +181,12 @@ export default function Compare() {
                             <div className="teamsSection">
                                 <div className="teamInfo">
                                     <div className="logoWrapper mb-2">{getTeamLogo(team1Details.team_name)}</div>
-                                    <div className="teamName fw-semibold text-center">{getShortTeamName(team1Details.team_name)}</div>
+                                    <div className="teamName fw-semibold text-center">{team1Details.team_name_short}</div>
                                     <div className="teamFirstYear text-center fw-normal">Est. {team1Details.franchise_first_year}</div>
                                 </div>
                                 <div className="teamInfo">
                                     <div className="logoWrapper mb-2">{getTeamLogo(team2Details.team_name)}</div>
-                                    <div className="teamName fw-semibold text-center">{getShortTeamName(team2Details.team_name)}</div>
+                                    <div className="teamName fw-semibold text-center">{team2Details.team_name_short}</div>
                                     <div className="teamFirstYear text-center fw-normal">Est. {team2Details.franchise_first_year}</div>
                                 </div>
                             </div>
