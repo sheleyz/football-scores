@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useTeamContext } from "../app/context/TeamContext";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
+import Games from "./Games";
 
 // Images
 import sf49ers from "../images/logos/49ers.webp";
@@ -176,7 +177,7 @@ export default function Compare() {
             </div>
             <div className="compareWrapper d-flex mt-4 mb-5 w-100 justify-content-center">
                 <div className="col-12 col-md-8 col-lg-6">
-                    {loaded && team1Details && (
+                    {loaded && team1Details && team2Details && (
                         <div className="compareCardWrapper text-center">
                             <div className="teamsSection">
                                 <div className="teamInfo">
@@ -297,6 +298,14 @@ export default function Compare() {
                     )}
                 </div>
             </div>
+            {loaded && team1Details && team2Details && (
+                <div>
+                    <div className="headingWrapper mw-100 px-xl-5 pt-4">
+                        <h2>Games</h2>
+                    </div>
+                    <Games key={`${team1Details?.team_name}-${team2Details?.team_name}`} team1={team1Details} team2={team2Details} />
+                </div>
+            )}
         </div>
     );
 }

@@ -425,6 +425,14 @@ hr.divider {
     }
 }
 
+.headingWrapper {
+    display: flex;
+    justify-content: center;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+    margin-bottom: 0rem;
+}
+
 footer a {
     color: inherit;
 

@@ -2,7 +2,7 @@
 
 import Form from "react-bootstrap/Form";
 
-export default function Filters({ onChange, gameFilters, teamFilters }) {
+export default function Filters({ onChange, gameFilters, teamFilters, compareFilters }) {
     let teams = [
         "San Francisco 49ers",
         "Chicago Bears",
@@ -113,7 +113,7 @@ export default function Filters({ onChange, gameFilters, teamFilters }) {
     weeks.sort((a, b) => b - a);
     return (
         <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 my-3">
-            {gameFilters && (
+            {gameFilters && !compareFilters && (
                 <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>
                     {teams.map((team) => (

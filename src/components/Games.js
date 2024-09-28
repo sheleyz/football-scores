@@ -10,9 +10,14 @@ import Button from "react-bootstrap/Button";
 import Filters from "./Filters";
 import Game from "./Game";
 
-export default function Games() {
+export default function Games({team1, team2}) {
     const [limit, setLimit] = useState(15);
     let { games, loaded } = useTeamContext();
+    if (team1 && team2) {
+        games = games.filter((game) => {
+            return (game.team_home === team1.team_name && game.team_away === team2.team_name) || (game.team_home === team2.team_name && game.team_away === team1.team_name);
+        });
+    }
     const [gameData, setGameData] = useState(games.slice(0, limit));
     const [noGamesFound, setNoGamesFound] = useState(false);
     const [filters, setFilters] = useState({
@@ -98,7 +103,7 @@ export default function Games() {
     return (
         <div className="mainWrapper container mw-100 px-4 px-md-5 py-4">
             {/* Filter Games */}
-            <Filters onChange={handleFilters} gameFilters={true} />
+            <Filters onChange={handleFilters} gameFilters={true} compareFilters={team1 && team2} />
 
             {!loaded && (
                 <div className="loadingWrapper">
