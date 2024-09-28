@@ -15,6 +15,7 @@ export default function Header() {
                 <Navbar.Collapse id="navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link href="/teams">Teams</Nav.Link>
+                        <Nav.Link href="/compare">Compare</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
