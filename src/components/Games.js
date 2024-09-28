@@ -12,7 +12,7 @@ import Game from "./Game";
 
 export default function Games({team1, team2}) {
     const [limit, setLimit] = useState(15);
-    let { games, loaded } = useTeamContext();
+    let { games, teams, loaded } = useTeamContext();
     if (team1 && team2) {
         games = games.filter((game) => {
             return (game.team_home === team1.team_name && game.team_away === team2.team_name) || (game.team_home === team2.team_name && game.team_away === team1.team_name);
@@ -29,11 +29,12 @@ export default function Games({team1, team2}) {
     useEffect(() => {
         if (loaded) {
             let filteredGameData = gameData;
+            let selectedTeam = teams.find((team) => team.team_name === filters.team || team.team_name_old.includes(filters.team));
 
             // Filter games if a team is selected
             if (filters.team !== "all" && filters.season === "all" && filters.week === "all") {
                 filteredGameData = games.filter((game) => {
-                    return game.team_home === filters.team || game.team_away === filters.team;
+                    return game.team_home === selectedTeam.team_name || game.team_away === selectedTeam.team_name || selectedTeam.team_name_old.includes(game.team_home) || selectedTeam.team_name_old.includes(game.team_away);
                 });
             }
             // Filter games if a season is selected
@@ -51,13 +52,13 @@ export default function Games({team1, team2}) {
             // Filter games if a team and season are selected
             if (filters.team !== "all" && filters.season !== "all" && filters.week === "all") {
                 filteredGameData = games.filter((game) => {
-                    return (game.team_home === filters.team || game.team_away === filters.team) && game.schedule_season === filters.season;
+                    return (game.team_home === selectedTeam.team_name || game.team_away === selectedTeam.team_name || selectedTeam.team_name_old.includes(game.team_home) || selectedTeam.team_name_old.includes(game.team_away)) && game.schedule_season === filters.season;
                 });
             }
             // Filter games if a team and week are selected
             if (filters.team !== "all" && filters.season === "all" && filters.week !== "all") {
                 filteredGameData = games.filter((game) => {
-                    return (game.team_home === filters.team || game.team_away === filters.team) && game.schedule_week === filters.week;
+                    return (game.team_home === selectedTeam.team_name || game.team_away === selectedTeam.team_name || selectedTeam.team_name_old.includes(game.team_home) || selectedTeam.team_name_old.includes(game.team_away)) && game.schedule_week === filters.week;
                 });
             }
             // Filter games if a season and week are selected
@@ -69,7 +70,7 @@ export default function Games({team1, team2}) {
             // Filter games if a team, season, and week are selected
             if (filters.team !== "all" && filters.season !== "all" && filters.week !== "all") {
                 filteredGameData = games.filter((game) => {
-                    return (game.team_home === filters.team || game.team_away === filters.team) && game.schedule_season === filters.season && game.schedule_week === filters.week;
+                    return (game.team_home === selectedTeam.team_name || game.team_away === selectedTeam.team_name || selectedTeam.team_name_old.includes(game.team_home) || selectedTeam.team_name_old.includes(game.team_away)) && game.schedule_season === filters.season && game.schedule_week === filters.week;
                 });
             }
             // Get default games if no filters are selected
