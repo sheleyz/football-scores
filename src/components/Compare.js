@@ -42,13 +42,18 @@ import titans from "../images/logos/titans.webp";
 import vikings from "../images/logos/vikings.webp";
 
 export default function Compare() {
-    const { teams, loaded } = useTeamContext();
+    const { teams, games, loaded } = useTeamContext();
     const [team1Details, setTeam1Details] = useState();
     const [team2Details, setTeam2Details] = useState();
     const [selections, setSelections] = useState({
         team1: "none",
         team2: "none"
     });
+    const [team1Wins, setTeam1Wins] = useState(0);
+    const [team2Wins, setTeam2Wins] = useState(0);
+    const [team1PlayoffWins, setTeam1PlayoffWins] = useState(0);
+    const [team2PlayoffWins, setTeam2PlayoffWins] = useState(0);
+    const [ties, setTies] = useState(0);
 
     const getTeamLogo = (teamName) => {
         switch (teamName) {
@@ -137,13 +142,57 @@ export default function Compare() {
         if (loaded) {
             const { team1, team2 } = selections;
 
-            if (team1 !== "none" && team2 !== "none") {
+            if (team1 !== "none" && team2 !== "none" && team1 !== team2) {
                 const team1Stats = teams.find((team) => team.team_name_short === team1);
                 const team2Stats = teams.find((team) => team.team_name_short === team2);
+
+                let team1WinCount = 0;
+                let team2WinCount = 0;
+                let team1PlayoffWinCount = 0;
+                let team2PlayoffWinCount = 0;
+                let tiesCount = 0;
+
+                games.forEach((game) => {
+                    if (
+                        (game.team_home === team1Stats.team_name || team1Stats.team_name_old.includes(game.team_home)) &&
+                        (game.team_away === team2Stats.team_name || team2Stats.team_name_old.includes(game.team_away))
+                    ) {
+                        if (game.score_home > game.score_away && game.schedule_playoff === "FALSE") {
+                            team1WinCount++;
+                        } else if (game.score_away > game.score_home && game.schedule_playoff === "FALSE") {
+                            team2WinCount++;
+                        } else if (game.score_home > game.score_away && game.schedule_playoff === "TRUE") {
+                            team1PlayoffWinCount++;
+                        } else if (game.score_away > game.score_home && game.schedule_playoff === "TRUE") {
+                            team2PlayoffWinCount++;
+                        } else if (game.score_home == game.score_away) {
+                            tiesCount++;
+                        }
+                    } else if (
+                        (game.team_home === team2Stats.team_name || team2Stats.team_name_old.includes(game.team_home)) &&
+                        (game.team_away === team1Stats.team_name || team1Stats.team_name_old.includes(game.team_away))
+                    ) {
+                        if (game.score_home > game.score_away && game.schedule_playoff === "FALSE") {
+                            team2WinCount++;
+                        } else if (game.score_away > game.score_home && game.schedule_playoff === "FALSE") {
+                            team1WinCount++;
+                        } else if (game.score_home > game.score_away && game.schedule_playoff === "TRUE") {
+                            team2PlayoffWinCount++;
+                        } else if (game.score_away > game.score_home && game.schedule_playoff === "TRUE") {
+                            team1PlayoffWinCount++;
+                        } else if (game.score_home == game.score_away) {
+                            tiesCount++;
+                        }
+                    }
+                });
+                setTeam1Wins(team1WinCount);
+                setTeam2Wins(team2WinCount);
+                setTeam1PlayoffWins(team1PlayoffWinCount);
+                setTeam2PlayoffWins(team2PlayoffWinCount);
+                setTies(tiesCount);
+
                 setTeam1Details(team1Stats);
                 setTeam2Details(team2Stats);
-                // console.log(team1Stats);
-                // console.log(team2Stats);
             }
         }
     }, [loaded, selections]);
@@ -193,6 +242,33 @@ export default function Compare() {
                             </div>
                             <Table bordered responsive size="sm">
                                 <tbody>
+                                    <tr>
+                                        <td className={`teamStat ${team1Wins > team2Wins && "bg-brand-green-light"}`}>
+                                            <div>{team1Wins}</div>
+                                        </td>
+                                        <td>Matchup Wins</td>
+                                        <td className={`teamStat ${team1Wins < team2Wins && "bg-brand-green-light"}`}>
+                                            <div>{team2Wins}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className={`teamStat`}>
+                                            <div>{ties}</div>
+                                        </td>
+                                        <td>Matchup Ties</td>
+                                        <td className={`teamStat`}>
+                                            <div>{ties}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className={`teamStat ${team1PlayoffWins > team2PlayoffWins && "bg-brand-green-light"}`}>
+                                            <div>{team1PlayoffWins}</div>
+                                        </td>
+                                        <td>Matchup Playoff Wins</td>
+                                        <td className={`teamStat ${team1PlayoffWins < team2PlayoffWins && "bg-brand-green-light"}`}>
+                                            <div>{team2PlayoffWins}</div>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td className={`teamStat ${team1Details.franchise_wins > team2Details.franchise_wins && "bg-brand-green-light"}`}>
                                             <div>{team1Details.franchise_wins}</div>
