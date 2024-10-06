@@ -157,30 +157,30 @@ export default function Compare() {
                         (game.team_home === team1Stats.team_name || team1Stats.team_name_old.includes(game.team_home)) &&
                         (game.team_away === team2Stats.team_name || team2Stats.team_name_old.includes(game.team_away))
                     ) {
-                        if (game.score_home > game.score_away && game.schedule_playoff === "FALSE") {
+                        if (Number(game.score_home) > Number(game.score_away) && game.schedule_playoff === "FALSE") {
                             team1WinCount++;
-                        } else if (game.score_away > game.score_home && game.schedule_playoff === "FALSE") {
+                        } else if (Number(game.score_away) > Number(game.score_home) && game.schedule_playoff === "FALSE") {
                             team2WinCount++;
-                        } else if (game.score_home > game.score_away && game.schedule_playoff === "TRUE") {
+                        } else if (Number(game.score_home) > Number(game.score_away) && game.schedule_playoff === "TRUE") {
                             team1PlayoffWinCount++;
-                        } else if (game.score_away > game.score_home && game.schedule_playoff === "TRUE") {
+                        } else if (Number(game.score_away) > Number(game.score_home) && game.schedule_playoff === "TRUE") {
                             team2PlayoffWinCount++;
-                        } else if (game.score_home == game.score_away) {
+                        } else if (Number(game.score_home) == Number(game.score_away)) {
                             tiesCount++;
                         }
                     } else if (
                         (game.team_home === team2Stats.team_name || team2Stats.team_name_old.includes(game.team_home)) &&
                         (game.team_away === team1Stats.team_name || team1Stats.team_name_old.includes(game.team_away))
                     ) {
-                        if (game.score_home > game.score_away && game.schedule_playoff === "FALSE") {
+                        if (Number(game.score_home) > Number(game.score_away) && game.schedule_playoff === "FALSE") {
                             team2WinCount++;
-                        } else if (game.score_away > game.score_home && game.schedule_playoff === "FALSE") {
+                        } else if (Number(game.score_away) > Number(game.score_home) && game.schedule_playoff === "FALSE") {
                             team1WinCount++;
-                        } else if (game.score_home > game.score_away && game.schedule_playoff === "TRUE") {
+                        } else if (Number(game.score_home) > Number(game.score_away) && game.schedule_playoff === "TRUE") {
                             team2PlayoffWinCount++;
-                        } else if (game.score_away > game.score_home && game.schedule_playoff === "TRUE") {
+                        } else if (Number(game.score_away) > Number(game.score_home) && game.schedule_playoff === "TRUE") {
                             team1PlayoffWinCount++;
-                        } else if (game.score_home == game.score_away) {
+                        } else if (Number(game.score_home) == Number(game.score_away)) {
                             tiesCount++;
                         }
                     }
