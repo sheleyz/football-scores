@@ -26,5 +26,5 @@ export const TeamProvider = ({ children }) => {
         }
     }, [didRun.current, loaded]);
 
-    return <TeamContext.Provider value={{ teams: teamsRef.current, games: gamesRef.current, loaded }}>{children}</TeamContext.Provider>;
+    return <TeamContext value={{ teams: teamsRef.current, games: gamesRef.current, loaded }}>{children}</TeamContext>;
 };
