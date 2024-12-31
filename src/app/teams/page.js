@@ -1,6 +1,6 @@
 // Components
-import Layout from "../../components/Layout";
-import Teams from "../../components/Teams";
+import Layout from "../../components/branding/Layout";
+import Teams from "../../components/teams/Teams";
 
 export default function TeamsPage() {
     return (

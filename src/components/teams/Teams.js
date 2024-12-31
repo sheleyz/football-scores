@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTeamContext } from "../app/context/TeamContext";
+import { useTeamContext } from "../../app/context/TeamContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
 // Components
-import Filters from "./Filters";
+import Filters from "../filters/Filters";
 import Team from "./Team";
 
 export default function Teams() {

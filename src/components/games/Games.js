@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTeamContext } from "../app/context/TeamContext";
+import { useTeamContext } from "../../app/context/TeamContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import Button from "react-bootstrap/Button";
 
 // Components
-import Filters from "./Filters";
+import Filters from "../filters/Filters";
 import Game from "./Game";
 
 export default function Games({team1, team2}) {

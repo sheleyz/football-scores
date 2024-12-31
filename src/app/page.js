@@ -1,6 +1,6 @@
 // Components
-import Layout from "../components/Layout";
-import Games from "../components/Games";
+import Layout from "../components/branding/Layout";
+import Games from "../components/games/Games";
 
 export default function Home() {
     return (

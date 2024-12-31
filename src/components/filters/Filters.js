@@ -1,6 +1,6 @@
 "use client";
 
-import { useTeamContext } from "../app/context/TeamContext";
+import { useTeamContext } from "../../app/context/TeamContext";
 import Form from "react-bootstrap/Form";
 
 export default function Filters({ onChange, gameFilters, teamFilters, compareFilters }) {

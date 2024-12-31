@@ -1,6 +1,6 @@
 // Components
-import Layout from "../../components/Layout";
-import Compare from "../../components/Compare";
+import Layout from "../../components/branding/Layout";
+import Compare from "../../components/compare/Compare";
 
 export default function ComparePage() {
     return (
