@@ -1,11 +1,10 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.scss";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import localFont from "next/font/local";
 import { Providers } from "./providers";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const outfit = localFont({
     src: "./fonts/Outfit/Outfit-VariableFont_wght.ttf",
@@ -56,16 +55,7 @@ export default function RootLayout({ children }) {
             <body className={outfit.variable}>
                 <Providers>{children}</Providers>
             </body>
-
-            {/* Google tag (gtag.js) */}
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H9K5XVBHBF"></Script>
-            <Script id="google-analytics">
-                {`window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'G-H9K5XVBHBF');`}
-            </Script>
+            <GoogleAnalytics gaId="G-H9K5XVBHBF" />
         </html>
     );
 }
