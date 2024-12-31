@@ -1,141 +1,135 @@
+// Variables
+$brand-primary: #FFBF00;
+$brand-secondary: #003363;
+$brand-light: #EBEBEB;
+$brand-dark: #242424;
+$brand-alternate: #3A6EA5;
+$brand-secondary-alt: #004E98;
+
+$brand-grey: #C0C0C0;
+$brand-grey-dark: #6c757d;
+$brand-green-light: #C7EFE0;
+
 @use '~bootstrap/scss/bootstrap';
-
-:root {
-    --brand-primary: #FFBF00;
-    --brand-secondary: #003363;
-    --brand-light: #EBEBEB;
-    --brand-dark: #242424;
-    --brand-alternate: #3A6EA5;
-    --brand-secondary-alt: #004E98;
-
-    --brand-grey: #C0C0C0;
-    --brand-grey-dark: #6c757d;
-    --brand-green-light: #C7EFE0;
-
-    --bs-body-bg: #003363;
-
-    --bs-body-font-size: 1.1rem;
-}
 
 html,
 body {
-    background-color: var(--brand-secondary);
+    background-color: $brand-secondary;
     font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .bg-brand-secondary {
-    background-color: var(--brand-secondary);
+    background-color: $brand-secondary;
 }
 
 .bg-brand-light {
-    background-color: var(--brand-light);
+    background-color: $brand-light;
 }
 
 .bg-brand-green-light {
-    background-color: var(--brand-green-light) !important;
+    background-color: $brand-green-light !important;
 }
 
 .text-grey {
-    color: var(--brand-grey);
+    color: $brand-grey;
 }
 
 .text-grey-dark {
-    color: var(--brand-grey-dark);
+    color: $brand-grey-dark;
 }
 
 .text-brand-light {
-    color: var(--brand-light);
+    color: $brand-light;
 }
 
 .text-brand-secondary {
-    color: var(--brand-secondary);
+    color: $brand-secondary;
 }
 
 .btn-outline-brand-primary {
-    color: var(--brand-primary) !important;
-    border-color: var(--brand-primary) !important;
+    color: $brand-primary !important;
+    border-color: $brand-primary !important;
 
     &:hover,
     &:active {
-        color: var(--brand-secondary) !important;
-        border-color: var(--brand-primary) !important;
-        background-color: var(--brand-primary) !important;
+        color: $brand-secondary !important;
+        border-color: $brand-primary !important;
+        background-color: $brand-primary !important;
     }
 
     &:focus,
     &:focus-visible {
-        box-shadow: 0 0 0 0.25rem var(--brand-dark);
+        box-shadow: 0 0 0 0.25rem $brand-dark;
     }
 }
 
 .btn-brand-primary {
-    color: var(--brand-secondary) !important;
-    background-color: var(--brand-primary) !important;
+    color: $brand-secondary !important;
+    background-color: $brand-primary !important;
 
     &:hover,
     &:active {
-        color: var(--brand-secondary) !important;
-        background-color: var(--brand-primary) !important;
+        color: $brand-secondary !important;
+        background-color: $brand-primary !important;
     }
 
     &:focus,
     &:focus-visible {
-        color: var(--brand-secondary) !important;
-        background-color: var(--brand-primary) !important;
-        box-shadow: 0 0 0 0.25rem var(--brand-secondary);
+        color: $brand-secondary !important;
+        background-color: $brand-primary !important;
+        box-shadow: 0 0 0 0.25rem $brand-secondary;
     }
 }
 
 .btn-brand-secondary {
-    background-color: var(--brand-secondary) !important;
+    background-color: $brand-secondary !important;
     box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.20), 0 10px 20px -2px rgba(0, 0, 0, 0.20);
 
     &:hover,
     &:active {
-        background-color: var(--brand-secondary-alt) !important;
-        border-color: var(--brand-secondary-alt) !important;
+        background-color: $brand-secondary-alt !important;
+        border-color: $brand-secondary-alt !important;
     }
 
     &:focus,
     &:focus-visible {
-        background-color: var(--brand-secondary-alt) !important;
-        border-color: var(--brand-secondary-alt) !important;
-        box-shadow: 0 0 0 0.25rem var(--brand-dark);
+        background-color: $brand-secondary-alt !important;
+        border-color: $brand-secondary-alt !important;
+        box-shadow: 0 0 0 0.25rem $brand-dark;
     }
 }
 
 .navbar {
-    --bs-navbar-nav-link-padding-x: 1rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     padding: 0.75rem 0rem !important;
 
     .nav-link {
-        --bs-nav-link-padding-y: 5px;
+        padding: 5px 0rem !important;
         font-weight: 600;
         font-size: 1.1rem;
-        color: var(--brand-light);
+        color: $brand-light;
 
         &.active {
-            color: var(--brand-grey);
+            color: $brand-grey;
         }
 
         &:hover {
-            color: var(--brand-grey);
+            color: $brand-grey;
         }
 
         &:first-of-type {
-            padding-top: 15px;
+            padding-top: 15px !important;
         }
 
         &:last-of-type {
-            padding-right: 0px;
+            padding-right: 0px !important;
         }
 
         @media (min-width: 576px) {
-            --bs-nav-link-padding-y: 0rem;
+            padding: 0rem 1rem !important;
 
             &:first-of-type {
-                padding-top: inherit;
+                padding-top: inherit !important;
             }
         }
     }
@@ -147,16 +141,16 @@ body {
     padding-bottom: 5px;
 
     &:hover {
-        color: var(--brand-grey);
+        color: $brand-grey;
     }
 }
 
 .navbar-toggler {
     border: none;
-    color: var(--brand-grey);
+    color: $brand-grey;
 
     &.collapsed {
-        color: var(--brand-light);
+        color: $brand-light;
     }
 
     &:focus {
@@ -175,12 +169,12 @@ hr.divider {
     height: 0.2rem;
     max-width: 3.25rem;
     margin: 1.5rem auto;
-    background-color: var(--brand-grey);
+    background-color: $brand-grey;
     opacity: 1;
 }
 
 .btn-social {
-    color: var(--brand-light) !important;
+    color: $brand-light !important;
     height: 2.5rem;
     width: 2.5rem;
     display: inline-flex;
@@ -191,7 +185,7 @@ hr.divider {
 
     &:hover,
     &:active {
-        color: var(--brand-grey) !important;
+        color: $brand-grey !important;
     }
 }
 
@@ -206,6 +200,7 @@ hr.divider {
 
     p {
         color: #30373D;
+        font-size: 1.1rem;
     }
 
     a {
@@ -213,7 +208,7 @@ hr.divider {
 
         &:hover,
         &:active {
-            color: var(--brand-grey-dark) !important;
+            color: $brand-grey-dark !important;
         }
     }
 }
@@ -223,7 +218,7 @@ hr.divider {
     justify-content: center;
     align-items: center;
     height: 300px;
-    color: var(--brand-secondary);
+    color: $brand-secondary;
 }
 
 .mainWrapper {
@@ -338,6 +333,7 @@ hr.divider {
     padding: 20px 10px;
     margin: 10px;
     background-color: #fff;
+    font-size: 1.1rem;
     border-radius: 0.75rem;
     box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
 
@@ -411,7 +407,6 @@ hr.divider {
     }
 
     table {
-        --bs-table-bg: white;
         margin-bottom: 0;
 
         td {
@@ -420,8 +415,8 @@ hr.divider {
         }
     }
 
-    .teamFirstYear {
-        font-size: 1rem;
+    .teamName {
+        font-size: 1.1rem;
     }
 
     .teamsSection {
@@ -443,11 +438,15 @@ footer a {
 
     &:hover,
     &:active {
-        color: var(--brand-grey) !important;
+        color: $brand-grey !important;
     }
 }
 
 .footerText {
+    p {
+        font-size: 1.1rem;
+    }
+
     @media (min-width: 992px) {
         max-width: 900px !important;
     }
