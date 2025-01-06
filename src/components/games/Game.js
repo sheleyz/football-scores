@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTeamContext } from "../../app/context/TeamContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import styles from "./games.module.scss";
 
 // Images
 import sf49ers from "../../images/logos/49ers.webp";
@@ -152,39 +153,39 @@ export default function Game({ game }) {
 
     return (
         <div className="col-sm-12 col-md-6 col-lg-4 p-0">
-            <div className="gameWrapper">
-                <div className="scoreWrapper pb-3">
-                    <div className={`teamWrapper ${Number(game.score_home) > Number(game.score_away) ? "fw-medium" : "loser"}`}>
-                        <div className="logoNameWrapper">
-                            <div className="logoWrapper">{getTeamLogo(game.team_home)}</div>
+            <div className={styles.gameWrapper}>
+                <div className={`${styles.scoreWrapper} pb-3`}>
+                    <div className={`${styles.teamWrapper} ${Number(game.score_home) > Number(game.score_away) ? "fw-medium" : `${styles.loser}`}`}>
+                        <div className={styles.logoNameWrapper}>
+                            <div className={styles.logoWrapper}>{getTeamLogo(game.team_home)}</div>
                             <div className="teamName me-2">{getShortTeamName(game.team_home)}</div>
                         </div>
-                        <div className="scoreWinnerWrapper">
+                        <div className={styles.scoreWinnerWrapper}>
                             {Number(game.score_home) > Number(game.score_away) && (
                                 <div className="winnerIcon me-2">
                                     <FontAwesomeIcon icon={faCaretRight} />
                                 </div>
                             )}
-                            <div className="teamScore">{game.score_home}</div>
+                            <div className={styles.teamScore}>{game.score_home}</div>
                         </div>
                     </div>
-                    <div className={`teamWrapper ${Number(game.score_away) > Number(game.score_home) ? "fw-medium" : "loser"}`}>
-                        <div className="logoNameWrapper">
-                            <div className="logoWrapper">{getTeamLogo(game.team_away)}</div>
+                    <div className={`${styles.teamWrapper} ${Number(game.score_away) > Number(game.score_home) ? "fw-medium" : `${styles.loser}`}`}>
+                        <div className={styles.logoNameWrapper}>
+                            <div className={styles.logoWrapper}>{getTeamLogo(game.team_away)}</div>
                             <div className="teamName me-2">{getShortTeamName(game.team_away)}</div>
                         </div>
-                        <div className="scoreWinnerWrapper">
+                        <div className={styles.scoreWinnerWrapper}>
                             {Number(game.score_away) > Number(game.score_home) && (
                                 <div className="winnerIcon me-2">
                                     <FontAwesomeIcon icon={faCaretRight} />
                                 </div>
                             )}
-                            <div className="teamScore">{game.score_away}</div>
+                            <div className={styles.teamScore}>{game.score_away}</div>
                         </div>
                     </div>
                 </div>
-                <div className="gameDetailsWrapper">
-                    <div className="envDetailsWrapper">
+                <div className={styles.gameDetailsWrapper}>
+                    <div className={styles.envDetailsWrapper}>
                         {game.schedule_week === "Wildcard" || game.schedule_week === "Division" || game.schedule_week === "Conference" || game.schedule_week === "Superbowl" ? (
                             convertWeekName(game.schedule_week)
                         ) : (
@@ -195,7 +196,7 @@ export default function Game({ game }) {
                         <div className="gameStadium">{game.stadium}</div>
                     </div>
                     {game.team_favorite_id && (
-                        <div className="spreadDetailsWrapper ms-2">
+                        <div className={`${styles.spreadDetailsWrapper} ms-2`}>
                             <div className="spreadFavorite">
                                 {game.team_favorite_id} {game.spread_favorite}
                             </div>

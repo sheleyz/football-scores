@@ -5,6 +5,7 @@ import { useTeamContext } from "../../app/context/TeamContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import Button from "react-bootstrap/Button";
+import styles from "./games.module.scss";
 
 // Components
 import Filters from "../filters/Filters";
@@ -131,7 +132,7 @@ export default function Games({team1, team2}) {
             {/* Load More Games */}
             {limit <= gameData.length && gameData.length !== 0 && (
                 <div className="d-flex justify-content-center align-items-center w-100">
-                    <Button data-bs-theme="dark" size="lg" onClick={handleLoadMore} className="btn-brand-secondary border-0">
+                    <Button data-bs-theme="dark" size="lg" onClick={handleLoadMore} className={`${styles["btn-brand-secondary"]} border-0`}>
                         Load More
                     </Button>
                 </div>
