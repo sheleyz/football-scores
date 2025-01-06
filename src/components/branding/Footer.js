@@ -1,7 +1,9 @@
+import styles from "./branding.module.scss";
+
 export default function Footer() {
     return (
-        <footer className="bg-brand-secondary">
-            <div className="footerText container d-flex flex-column align-items-center px-3 px-lg-5 pt-4 fw-semibold">
+        <footer className={`${styles["footer"]} ${styles["bg-brand-secondary"]}`}>
+            <div className={`${styles.footerText} container d-flex flex-column align-items-center px-3 px-lg-5 pt-4 fw-semibold"`}>
                 <div className="text-center pt-4 pb-3 fw-normal text-white">
                     <p className="mb-0"><i>Game data updated through 12/23/2024.</i></p>
                     <p><i>Team data updated through 12/2/2024.</i></p>

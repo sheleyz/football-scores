@@ -1,16 +1,5 @@
-// Variables
-$brand-primary: #FFBF00;
-$brand-secondary: #003363;
-$brand-light: #EBEBEB;
-$brand-dark: #242424;
-$brand-alternate: #3A6EA5;
-$brand-secondary-alt: #004E98;
-
-$brand-grey: #C0C0C0;
-$brand-grey-dark: #6c757d;
-$brand-green-light: #C7EFE0;
-
-@use '~bootstrap/scss/bootstrap';
+@use "./global" as *;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 html,
 body {
@@ -18,67 +7,8 @@ body {
     font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.bg-brand-secondary {
-    background-color: $brand-secondary;
-}
-
-.bg-brand-light {
-    background-color: $brand-light;
-}
-
 .bg-brand-green-light {
     background-color: $brand-green-light !important;
-}
-
-.text-grey {
-    color: $brand-grey;
-}
-
-.text-grey-dark {
-    color: $brand-grey-dark;
-}
-
-.text-brand-light {
-    color: $brand-light;
-}
-
-.text-brand-secondary {
-    color: $brand-secondary;
-}
-
-.btn-outline-brand-primary {
-    color: $brand-primary !important;
-    border-color: $brand-primary !important;
-
-    &:hover,
-    &:active {
-        color: $brand-secondary !important;
-        border-color: $brand-primary !important;
-        background-color: $brand-primary !important;
-    }
-
-    &:focus,
-    &:focus-visible {
-        box-shadow: 0 0 0 0.25rem $brand-dark;
-    }
-}
-
-.btn-brand-primary {
-    color: $brand-secondary !important;
-    background-color: $brand-primary !important;
-
-    &:hover,
-    &:active {
-        color: $brand-secondary !important;
-        background-color: $brand-primary !important;
-    }
-
-    &:focus,
-    &:focus-visible {
-        color: $brand-secondary !important;
-        background-color: $brand-primary !important;
-        box-shadow: 0 0 0 0.25rem $brand-secondary;
-    }
 }
 
 .btn-brand-secondary {
@@ -97,100 +27,6 @@ body {
         border-color: $brand-secondary-alt !important;
         box-shadow: 0 0 0 0.25rem $brand-dark;
     }
-}
-
-.navbar {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    padding: 0.75rem 0rem !important;
-
-    .nav-link {
-        padding: 5px 0rem !important;
-        font-weight: 600;
-        font-size: 1.1rem;
-        color: $brand-light;
-
-        &.active {
-            color: $brand-grey;
-        }
-
-        &:hover {
-            color: $brand-grey;
-        }
-
-        &:first-of-type {
-            padding-top: 15px !important;
-        }
-
-        &:last-of-type {
-            padding-right: 0px !important;
-        }
-
-        @media (min-width: 576px) {
-            padding: 0rem 1rem !important;
-
-            &:first-of-type {
-                padding-top: inherit !important;
-            }
-        }
-    }
-}
-
-.navbar-brand {
-    font-size: 1.1rem !important;
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    &:hover {
-        color: $brand-grey;
-    }
-}
-
-.navbar-toggler {
-    border: none;
-    color: $brand-grey;
-
-    &.collapsed {
-        color: $brand-light;
-    }
-
-    &:focus {
-        box-shadow: none;
-    }
-}
-
-.img-cover {
-    width: 100% !important;
-    height: 400px !important;
-    object-fit: cover;
-}
-
-hr.divider {
-    border-top: 0;
-    height: 0.2rem;
-    max-width: 3.25rem;
-    margin: 1.5rem auto;
-    background-color: $brand-grey;
-    opacity: 1;
-}
-
-.btn-social {
-    color: $brand-light !important;
-    height: 2.5rem;
-    width: 2.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: none;
-
-    &:hover,
-    &:active {
-        color: $brand-grey !important;
-    }
-}
-
-.centerImage {
-    object-position: top center !important;
 }
 
 .heroIntro {
@@ -431,23 +267,4 @@ hr.divider {
     padding-left: 2.3rem;
     padding-right: 2.3rem;
     margin-bottom: 0rem;
-}
-
-footer a {
-    color: inherit;
-
-    &:hover,
-    &:active {
-        color: $brand-grey !important;
-    }
-}
-
-.footerText {
-    p {
-        font-size: 1.1rem;
-    }
-
-    @media (min-width: 992px) {
-        max-width: 900px !important;
-    }
 }

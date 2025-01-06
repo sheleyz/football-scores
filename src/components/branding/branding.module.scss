@@ -1,0 +1,83 @@
+@use "../../global" as *;
+
+.bg-brand-secondary {
+    background-color: $brand-secondary;
+}
+
+.text-brand-light {
+    color: $brand-light;
+}
+
+.navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 0rem !important;
+
+    .nav-link {
+        padding: 5px 0rem !important;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: $brand-light;
+
+        &:hover {
+            color: $brand-grey;
+        }
+
+        &:first-of-type {
+            padding-top: 15px !important;
+        }
+
+        &:last-of-type {
+            padding-right: 0px !important;
+        }
+
+        @media (min-width: 576px) {
+            padding: 0rem 1rem !important;
+
+            &:first-of-type {
+                padding-top: inherit !important;
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    font-size: 1.1rem !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:hover {
+        color: $brand-grey;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    color: $brand-grey;
+
+    &.collapsed {
+        color: $brand-light;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.footer a {
+    color: inherit;
+
+    &:hover,
+    &:active {
+        color: $brand-grey !important;
+    }
+}
+
+.footerText {
+    p {
+        font-size: 1.1rem;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 900px !important;
+    }
+}
