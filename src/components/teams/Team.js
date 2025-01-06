@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import styles from "./teams.module.scss";
 
 // Images
 import sf49ers from "../../images/logos/49ers.webp";
@@ -122,16 +123,16 @@ export default function Team({ team }) {
 
     return (
         <div className="col-sm-12 col-md-6 col-lg-4 p-0">
-            <div className="teamCardWrapper">
-                <div className="logoWrapper mb-2">{getTeamLogo(team.team_name)}</div>
+            <div className={styles.teamCardWrapper}>
+                <div className={`${styles.logoWrapper} mb-2`}>{getTeamLogo(team.team_name)}</div>
                 <div className="teamName fw-semibold text-center">{team.team_name}</div>
                 <div className="teamFirstYear text-center">Est. {team.franchise_first_year}</div>
-                <div className="teamRecordsWrapper">
-                    <div className="teamRecordHeading">Overall Record</div>
+                <div className={styles.teamRecordsWrapper}>
+                    <div className={styles.teamRecordHeading}>Overall Record</div>
                     <div className="teamRecord mb-2">
                         {team.franchise_wins} - {team.franchise_losses} - {team.franchise_ties} ({(team.franchise_win_loss_percentage * 100).toFixed(1)}%)
                     </div>
-                    <div className="teamRecordHeading">Playoff Record</div>
+                    <div className={styles.teamRecordHeading}>Playoff Record</div>
                     <div className="teamRecord">
                         {team.franchise_playoff_wins} - {team.franchise_playoff_losses} ({(team.franchise_playoff_win_loss_percentage * 100).toFixed(1)}%)
                     </div>
