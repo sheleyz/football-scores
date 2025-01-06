@@ -21,19 +21,6 @@ body {
     justify-content: center;
 }
 
-.filterOptionsWrapper {
-    select {
-        margin: 10px;
-        width: 275px;
-
-        @media (max-width: 360px) {
-            margin-left: 0px;
-            margin-right: 0px;
-            width: 100%;
-        }
-    }
-}
-
 .gamesWrapper,
 .teamsWrapper,
 .messageWrapper,

@@ -2,6 +2,7 @@
 
 import { useTeamContext } from "../../app/context/TeamContext";
 import Form from "react-bootstrap/Form";
+import styles from "./filters.module.scss";
 
 export default function Filters({ onChange, gameFilters, teamFilters, compareFilters }) {
     const { teams } = useTeamContext();
@@ -34,7 +35,7 @@ export default function Filters({ onChange, gameFilters, teamFilters, compareFil
     // Sort Weeks in Descending Order
     weeks.sort((a, b) => b - a);
     return (
-        <div className="filterOptionsWrapper d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 my-3">
+        <div className={`${styles.filterOptionsWrapper} d-flex justify-content-center align-items-center flex-wrap flex-column flex-md-row w-100 my-3`}>
             {gameFilters && !compareFilters && (
                 <Form.Select className="bg-white" onChange={(e) => onChange("team", e.target.value)} aria-label="Select a team">
                     <option value="all">All Teams</option>

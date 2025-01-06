@@ -1,0 +1,14 @@
+@use "../../global" as *;
+
+.filterOptionsWrapper {
+    select {
+        margin: 10px;
+        width: 275px;
+
+        @media (max-width: 360px) {
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 100%;
+        }
+    }
+}
