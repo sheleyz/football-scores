@@ -1,14 +1,15 @@
 // Components
 import Layout from "../../components/branding/Layout";
+import Hero from "../../components/hero/Hero";
 import Compare from "../../components/compare/Compare";
 
 export default function ComparePage() {
     return (
         <Layout>
-            <div className="heroIntro d-flex flex-column align-items-center container px-3 px-md-5 pt-5">
-                <h1 className="text-center mb-3">Compare Football Teams</h1>
-                <p className="mb-0">Use the dropdown menus to select two teams in order to compare their franchise stats (all-time) and matchup history (since 1966 - the first season of the Super Bowl era).</p>
-            </div>
+            <Hero
+                heading={"Compare Football Teams"}
+                subheading={"Use the dropdown menus to select two teams in order to compare their franchise stats (all-time) and matchup history (since 1966 - the first season of the Super Bowl era)."}
+            />
             <Compare />
         </Layout>
     );

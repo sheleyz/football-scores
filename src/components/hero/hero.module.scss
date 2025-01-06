@@ -1,0 +1,21 @@
+@use "../../global" as *;
+
+.heroIntro {
+    @media (min-width: 992px) {
+        max-width: 900px !important;
+    }
+
+    p {
+        color: #30373D;
+        font-size: 1.1rem;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover,
+        &:active {
+            color: $brand-grey-dark !important;
+        }
+    }
+}
