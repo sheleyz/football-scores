@@ -8,7 +8,7 @@ export default function Home() {
         <Layout>
             <Hero
                 heading={"Welcome to Football Scores!"}
-                subheading={"Football Scores provides final scores, betting odds (when available), and other details for all NFL games since 1966 (the first season of the Super Bowl era). Use the dropdown menus to filter games by team, season, and/or week for everything from comparing Super Bowls to viewing specific games!"}
+                subheading={"Football Scores provides final scores, betting odds (when available), and other details for all NFL games in the Super Bowl era. Filter games using the dropdown menus for everything from comparing Super Bowls to viewing specific games!"}
             />
             <Games />
         </Layout>
